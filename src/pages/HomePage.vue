@@ -21,6 +21,50 @@ export default {
                 {
                     path: '../../public/course-portal/images/client-logo-06.png'
                 },
+            ],
+            onlineCourse: [
+                {
+                    image:'',
+                    price: 'Free',
+                    title: 'Personal Finance: Financial Security Thinking & Principles',
+                    lessons: '2',
+                    students:'299'
+                },
+                {
+                    image:'',
+                    price: '$40.00',
+                    title: 'Learning to Write as a Professional Author',
+                    lessons: '20',
+                    students:'77'
+                },
+                {
+                    image:'',
+                    price: 'Free',
+                    title: 'Customer-centric Info Tech Strategies',
+                    lessons: '24',
+                    students:'956'
+                },
+                {
+                    image:'',
+                    price: '$19.00',
+                    title: 'Open Programming Courses for Everyone: Python',
+                    lessons: '17',
+                    students:'66'
+                },
+                {
+                    image:'',
+                    price: '$26.00',
+                    title: 'Academic Listening and Note-taking',
+                    lessons: '14',
+                    students:'68'
+                },
+                {
+                    image:'',
+                    price: '$39.00',
+                    title: 'Master jQuery in a Short Period of Time',
+                    lessons: '6',
+                    students:'51'
+                },
             ]
         };
     },
@@ -74,7 +118,7 @@ export default {
                         </div>
                     </div>
                     
-                    <div class="col-12 mt-4">
+                    <div class="col-12 my-5">
                         <div class="row">
                             <div class="logo-container d-flex justify-content-center align-items-center" v-for="(singleLogo, i) in clientLogos">
                                 <img class="w-80 d-block" :src="singleLogo.path" alt="Client Logo">
@@ -86,6 +130,29 @@ export default {
             
             </div>
         </section>
+
+        <!---- Online course section ---->
+        <section class="online-course-section py-5">
+            
+            <div class="container">
+                <h4 class="text-center fs-6 mb-3">Stimulated to learn?</h4>
+                <h2 class="text-center fw-bold">Featured Online Courses</h2>
+
+                <div class="row">
+                    <div v-for="(singleCourse, i) in onlineCourse" class="course-card">
+                        <div>
+                            <img src="../../public/course-portal/images" alt="">
+                        </div>
+                        <h4>{{ singleCourse.price }}</h4>
+                        <h5>{{ singleCourse.title }}</h5>
+                        <span><i class="fa-solid fa-file-lines"></i> {{ singleCourse.lessons }} Lesson</span>
+                        <span><i class="fa-regular fa-user"></i> {{ singleCourse.students }} Students</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    
     </main>
 </template>
 
@@ -106,10 +173,15 @@ export default {
         button{
             background-color: $main-green-color;
             border: none;
+            transition: 0.2s ease-in;
             
             a{
                 text-decoration: none;
                 color: white;
+            }
+
+            &:hover{
+                background-color: $main-purple-color;
             }
         }
 
@@ -183,6 +255,19 @@ export default {
             width: calc((100% / 6) - 40px);
             margin: 0 20px;
             object-fit: contain;
+        }
+    }
+
+    .online-course-section{
+        background-color: $main-softgray-color;
+
+        h4{
+            color: $main-gray-color;
+            text-transform: uppercase;
+        }
+
+        h2{
+            color: $main-purple-color;
         }
     }
 </style>
