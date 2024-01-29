@@ -279,7 +279,7 @@ ul{
 
     li{
         display: inline-block;
-        margin: 10px;
+        margin: 9px;
     }
 }
 
