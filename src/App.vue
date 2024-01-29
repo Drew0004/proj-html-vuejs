@@ -19,8 +19,8 @@ export default {
 
     },
     mounted(){
-        axios.get()
-        .then();
+        // axios.get()
+        // .then();
     }
 }
 </script>
