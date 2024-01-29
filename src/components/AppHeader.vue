@@ -15,6 +15,54 @@ export default {
                     {
                     link:'Distant Learning',
                     },
+                    {
+                    link:'Multimedia Pedagogy',
+                    },
+                    {
+                    link:'Modern Schooling',
+                    },
+                    {
+                    link:'Remote Training',
+                    },
+                    {
+                    link:'Health Coaching',
+                    },
+                    {
+                    link:'Gym Coaching',
+                    },
+                    {
+                    link:'Business',
+                    },
+                    {
+                    link:'Artist',
+                    },
+                    {
+                    link:'Kitchen Coach',
+                    },
+                    {
+                    link:'Motivation',
+                    },
+                    {
+                    link:'Dancing',
+                    },
+                    {
+                    link:'Guitar',
+                    },
+                    {
+                    link:'Yoga',
+                    },
+                    {
+                    link:'Photography',
+                    },
+                    {
+                    link:'Personal Finance',
+                    },
+                    {
+                    link:'Sales Coaching',
+                    },
+                    {
+                    link:'Mental Therapy',
+                    },
                 ]
             }, 
             {
@@ -24,7 +72,34 @@ export default {
                     link:'Start Here',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Success Story',
+                    },
+                    {
+                    link:'About me',
+                    },
+                    {
+                    link:'About us 01',
+                    },
+                    {
+                    link:'About us 02',
+                    },
+                    {
+                    link:'About us 03',
+                    },
+                    {
+                    link:'Contact me',
+                    },
+                    {
+                    link:'Contact us',
+                    },
+                    {
+                    link:'Purchase Guide',
+                    },
+                    {
+                    link:'Privacy Policy',
+                    },
+                    {
+                    link:'Terms of Service',
                     },
                 ]
             },
@@ -81,23 +156,29 @@ export default {
                     <div class="container_img_header">
                         <img src="../../public/course-portal/images/dark-logo.png" alt="">
                     </div>
-                    <div v-for="(elem,index) in navbar">
+                    <div v-for="(elem,index) in navbar" :key='index'>
                         <nav>
-                            <ul class="dropdown" id="dropdown1">
-                                <li class="dropbtn">{{ elem.name }}</li>
+                            <ul class="dropdown">
+                                <li class="dropbtn">
+                                    {{ elem.name }}
+                                </li>
                                 <span>
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </span>
-                                <div v-for="(elem,index) in elem.list" class="dropdown-content">
-                                    <a href="#">{{ elem.link }}</a>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li v-for="(elem2,index2) in elem.list" :key='index2'>
+                                            <a href="#"> {{ elem2.link }}</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </ul>
-                            <ul class="dropdown" id="dropdown2">
+                            <!-- <ul class="dropdown" id="dropdown2">
                                 <li class="dropbtn"></li>
                                 <div class="dropdown-content">
                                     <a href="#"></a>
                                 </div>
-                            </ul>
+                            </ul> -->
                             <!-- <ul class="dropdown">
                                 <li class="dropbtn">Courses</li>
                                 <span>
@@ -194,6 +275,8 @@ export default {
 
 ul{
     list-style: none;
+    padding: 10px;
+
     li{
         display: inline-block;
         margin: 10px;
@@ -217,7 +300,7 @@ input[type=text] {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -228,7 +311,6 @@ input[type=text] {
   text-decoration: none;
   display: block;
 }
-
 
 .dropdown-content a:hover {
     background-color: #ddd;
