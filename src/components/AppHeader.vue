@@ -5,7 +5,7 @@ export default {
             navbar:[
             {
                 name:"Home",
-                links:[
+                list:[
                     {
                     link:'MaxCoach Education',
                     },
@@ -19,7 +19,7 @@ export default {
             }, 
             {
                 name:"Pages",
-                links:[
+                list:[
                     {
                     link:'Start Here',
                     },
@@ -30,7 +30,7 @@ export default {
             },
             {
                 name:"Courses",
-                links:[
+                list:[
                     {
                     link:'Start Here',
                     },
@@ -41,7 +41,7 @@ export default {
             },
             {
                 name:"Blog",
-                links:[
+                list:[
                     {
                     link:'Start Here',
                     },
@@ -52,7 +52,7 @@ export default {
             },
             {
                 name:"Shop",
-                links:[
+                list:[
                     {
                     link:'Start Here',
                     },
@@ -88,7 +88,7 @@ export default {
                                 <span>
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </span>
-                                <div class="dropdown-content">
+                                <div v-for="(elem,index) in elem.list" class="dropdown-content">
                                     <a href="#">{{ elem.link }}</a>
                                 </div>
                             </ul>
