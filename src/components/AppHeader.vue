@@ -5,7 +5,7 @@ export default {
             navbar:[
             {
                 name:"Home",
-                links:[
+                list:[
                     {
                     link:'MaxCoach Education',
                     },
@@ -15,49 +15,168 @@ export default {
                     {
                     link:'Distant Learning',
                     },
+                    {
+                    link:'Multimedia Pedagogy',
+                    },
+                    {
+                    link:'Modern Schooling',
+                    },
+                    {
+                    link:'Remote Training',
+                    },
+                    {
+                    link:'Health Coaching',
+                    },
+                    {
+                    link:'Gym Coaching',
+                    },
+                    {
+                    link:'Business',
+                    },
+                    {
+                    link:'Artist',
+                    },
+                    {
+                    link:'Kitchen Coach',
+                    },
+                    {
+                    link:'Motivation',
+                    },
+                    {
+                    link:'Dancing',
+                    },
+                    {
+                    link:'Guitar',
+                    },
+                    {
+                    link:'Yoga',
+                    },
+                    {
+                    link:'Photography',
+                    },
+                    {
+                    link:'Personal Finance',
+                    },
+                    {
+                    link:'Sales Coaching',
+                    },
+                    {
+                    link:'Mental Therapy',
+                    },
                 ]
             }, 
             {
                 name:"Pages",
-                links:[
+                list:[
                     {
                     link:'Start Here',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Success Story',
+                    },
+                    {
+                    link:'About me',
+                    },
+                    {
+                    link:'About us 01',
+                    },
+                    {
+                    link:'About us 02',
+                    },
+                    {
+                    link:'About us 03',
+                    },
+                    {
+                    link:'Contact me',
+                    },
+                    {
+                    link:'Contact us',
+                    },
+                    {
+                    link:'Purchase Guide',
+                    },
+                    {
+                    link:'Privacy Policy',
+                    },
+                    {
+                    link:'Terms of Service',
                     },
                 ]
             },
             {
                 name:"Courses",
-                links:[
-                    {
-                    link:'Start Here',
+                list:[
+                {
+                    link:'Courses Grid 01',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Courses Grid 02',
+                    },
+                    {
+                    link:'Courses Grid 03',
+                    },
+                    {
+                    link:'Membership Levels',
+                    },
+                    {
+                    link:'Become a Teacher',
+                    },
+                    {
+                    link:'Profile',
+                    },
+                    {
+                    link:'Checkout',
+                    },
+                    {
+                    link:'Single Layout',
+                    },
+                ]
+            },
+            {
+                name:"Features",
+                list:[
+                    {
+                    link:'Events',
+                    },
+                    {
+                    link:'Zoom Meetings',
                     },
                 ]
             },
             {
                 name:"Blog",
-                links:[
+                list:[
                     {
-                    link:'Start Here',
+                    link:'Blog Grid',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Blog Masonry',
+                    },
+                    {
+                    link:'Blog Classic',
+                    },
+                    {
+                    link:'Blog List',
                     },
                 ]
             },
             {
                 name:"Shop",
-                links:[
+                list:[
                     {
-                    link:'Start Here',
+                    link:'Shop Left Sidebar',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Shop Right Sidebar',
+                    },
+                    {
+                    link:'Cart',
+                    },
+                    {
+                    link:'Wishlist',
+                    },
+                    {
+                    link:'Single Product',
                     },
                 ]
             },
@@ -81,67 +200,23 @@ export default {
                     <div class="container_img_header">
                         <img src="../../public/course-portal/images/dark-logo.png" alt="">
                     </div>
-                    <div v-for="(elem,index) in navbar">
+                    <div v-for="(elem,index) in navbar" :key='index'>
                         <nav>
-                            <ul class="dropdown" id="dropdown1">
-                                <li class="dropbtn">{{ elem.name }}</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">{{ elem.link }}</a>
-                                </div>
-                            </ul>
-                            <ul class="dropdown" id="dropdown2">
-                                <li class="dropbtn"></li>
-                                <div class="dropdown-content">
-                                    <a href="#"></a>
-                                </div>
-                            </ul>
-                            <!-- <ul class="dropdown">
-                                <li class="dropbtn">Courses</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </ul>
                             <ul class="dropdown">
-                                <li class="dropbtn">Features</li>
+                                <li class="dropbtn">
+                                    {{ elem.name }}
+                                </li>
                                 <span>
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </span>
                                 <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
+                                    <ul>
+                                        <li v-for="(elem2,index2) in elem.list" :key='index2'>
+                                            <a href="#"> {{ elem2.link }}</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </ul>
-                            <ul class="dropdown">
-                                <li class="dropbtn">Blog</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </ul>
-                            <ul class="dropdown">
-                                <li class="dropbtn">Shop</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </ul> -->
                         </nav>
                         <!-- <nav>
                             <ul>
@@ -165,6 +240,12 @@ export default {
                                 </li>
                             </ul>
                         </nav> -->
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-circle-user"></i> 
+                    </div>
+                    <div>
+                        <input v-model="search" @keyup.enter="search" type="text" >
                     </div>
                 </div>
             </div>
@@ -194,9 +275,11 @@ export default {
 
 ul{
     list-style: none;
+    padding: 10px;
+
     li{
         display: inline-block;
-        margin: 10px;
+        margin: 9px;
     }
 }
 
@@ -217,7 +300,7 @@ input[type=text] {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -228,7 +311,6 @@ input[type=text] {
   text-decoration: none;
   display: block;
 }
-
 
 .dropdown-content a:hover {
     background-color: #ddd;
