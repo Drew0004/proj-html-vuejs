@@ -106,11 +106,40 @@ export default {
             {
                 name:"Courses",
                 list:[
-                    {
-                    link:'Start Here',
+                {
+                    link:'Courses Grid 01',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Courses Grid 02',
+                    },
+                    {
+                    link:'Courses Grid 03',
+                    },
+                    {
+                    link:'Membership Levels',
+                    },
+                    {
+                    link:'Become a Teacher',
+                    },
+                    {
+                    link:'Profile',
+                    },
+                    {
+                    link:'Checkout',
+                    },
+                    {
+                    link:'Single Layout',
+                    },
+                ]
+            },
+            {
+                name:"Features",
+                list:[
+                    {
+                    link:'Events',
+                    },
+                    {
+                    link:'Zoom Meetings',
                     },
                 ]
             },
@@ -118,10 +147,16 @@ export default {
                 name:"Blog",
                 list:[
                     {
-                    link:'Start Here',
+                    link:'Blog Grid',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Blog Masonry',
+                    },
+                    {
+                    link:'Blog Classic',
+                    },
+                    {
+                    link:'Blog List',
                     },
                 ]
             },
@@ -129,10 +164,19 @@ export default {
                 name:"Shop",
                 list:[
                     {
-                    link:'Start Here',
+                    link:'Shop Left Sidebar',
                     },
                     {
-                    link:'Course Portal',
+                    link:'Shop Right Sidebar',
+                    },
+                    {
+                    link:'Cart',
+                    },
+                    {
+                    link:'Wishlist',
+                    },
+                    {
+                    link:'Single Product',
                     },
                 ]
             },
@@ -173,56 +217,6 @@ export default {
                                     </ul>
                                 </div>
                             </ul>
-                            <!-- <ul class="dropdown" id="dropdown2">
-                                <li class="dropbtn"></li>
-                                <div class="dropdown-content">
-                                    <a href="#"></a>
-                                </div>
-                            </ul> -->
-                            <!-- <ul class="dropdown">
-                                <li class="dropbtn">Courses</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </ul>
-                            <ul class="dropdown">
-                                <li class="dropbtn">Features</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </ul>
-                            <ul class="dropdown">
-                                <li class="dropbtn">Blog</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </ul>
-                            <ul class="dropdown">
-                                <li class="dropbtn">Shop</li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <a href="#">we</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </ul> -->
                         </nav>
                         <!-- <nav>
                             <ul>
@@ -246,6 +240,12 @@ export default {
                                 </li>
                             </ul>
                         </nav> -->
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-circle-user"></i> 
+                    </div>
+                    <div>
+                        <input v-model="search" @keyup.enter="search" type="text" >
                     </div>
                 </div>
             </div>
