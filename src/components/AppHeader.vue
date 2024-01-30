@@ -248,7 +248,7 @@ export default {
                     <div class="container_img_header">
                         <img src="../../public/course-portal/images/dark-logo.png" alt="">
                     </div>
-                    <div >
+                    <div>
                         <nav>
                             <ul class="dropdown" id="firstdropdown">
                                 <li v-for="(elem,index) in navbar" :key='index' class="dropbtn">
@@ -257,13 +257,13 @@ export default {
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </li>
-                                <ul class="dropdowncontent" id="firstdropdown" >
+                                <!-- <ul class="dropdowncontent" id="firstdropdown" >
                                     <li v-for="(elem,index) in firstdropdown" :key='index'>
                                         <RouterLink :to="{name: elem.link }">
                                             {{ elem.linkname }}
                                         </RouterLink> 
                                     </li>
-                                </ul>
+                                </ul> -->
                                 <ul class="dropdowncontent" id="seconddropdown" >
                                     <li v-for="(elem,index) in seconddropdown" :key='index'>
                                         <RouterLink :to="{name: elem.link }">
@@ -271,7 +271,7 @@ export default {
                                         </RouterLink> 
                                     </li>
                                 </ul>
-                                <ul class="dropdowncontent" id="thirddropdown" >
+                                <!-- <ul class="dropdowncontent" id="thirddropdown" >
                                     <li v-for="(elem,index) in thirddropdown" :key='index'>
                                         <RouterLink :to="{name: elem.link }">
                                             {{ elem.linkname }}
@@ -298,8 +298,7 @@ export default {
                                             {{ elem.linkname }}
                                         </RouterLink> 
                                     </li>
-                                </ul>
-
+                                </ul> -->
                             </ul>
                         </nav>
                     </div>
