@@ -6,6 +6,7 @@ import YtVideoSection from '../components/HomePage-components/YtVideoSection.vue
 import SliderSection from '../components/HomePage-components/SliderSection.vue'
 import CounterSection from '../components/HomePage-components/CounterSection.vue'
 import BlogSection from '../components/HomePage-components/BlogSection.vue';
+import NewsletterSection from '../components/HomePage-components/NewsletterSection.vue';
 
 export default {
     data() {
@@ -23,6 +24,7 @@ export default {
         SliderSection,
         CounterSection,
         BlogSection,
+        NewsletterSection
     }
 }
 </script>
@@ -45,6 +47,8 @@ export default {
         <CounterSection/>
 
         <BlogSection/>
+
+        <NewsletterSection/>
 
     </main>
 </template>
