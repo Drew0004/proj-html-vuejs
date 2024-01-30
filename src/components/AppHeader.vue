@@ -14,15 +14,87 @@ export default {
             {
                 name:'Course',
                 link:'#',
-            }
+            },
+            {
+                name:'Features',
+                link:'#',
+            },
+            {
+                name:'Blog',
+                link:'#',
+            },
+            {
+                name:'Shop',
+                link:'#',
+            },
         ],
         firstdropdown:[
             {
-                linkname:'MaxCoach Education:',
+                linkname:'MaxCoach Education',
                 link:'home',   
             },
             {
-                linkname:'Course Portal:',
+                linkname:'Course Portal',
+                link:'home',   
+            },
+            {
+                linkname:'Distant Learning',
+                link:'home',   
+            },
+            {
+                linkname:'Multimedia Pedagogy',
+                link:'home',   
+            },
+            {
+                linkname:'Modern Schooling',
+                link:'home',   
+            },
+            {
+                linkname:'Remote Training',
+                link:'home',   
+            },
+            {
+                linkname:'Gym Coaching',
+                link:'home',   
+            },
+            {
+                linkname:'Business',
+                link:'home',   
+            },
+            {
+                linkname:'Artist',
+                link:'home',   
+            },
+            {
+                linkname:'Kitchen Coach',
+                link:'home',   
+            },
+            {
+                linkname:'Motivation',
+                link:'home',   
+            },
+            {
+                linkname:'Dancing',
+                link:'home',   
+            },
+            {
+                linkname:'Guitar',
+                link:'home',   
+            },
+            {
+                linkname:'Photography',
+                link:'home',   
+            },
+            {
+                linkname:'Personal Finance',
+                link:'home',   
+            },
+            {
+                linkname:'Sales Coaching',
+                link:'home',   
+            },
+            {
+                linkname:'Mental Therapy',
                 link:'home',   
             },
         ],
@@ -32,13 +104,131 @@ export default {
                 link:'StartHerePage',   
             },
             {
-                linkname:'Course Portal:',
+                linkname:'Success Story',
                 link:'',   
             },
-        ]
+            {
+                linkname:'About me',
+                link:'',   
+            },
+            {
+                linkname:'About us 01',
+                link:'',   
+            },
+            {
+                linkname:'About us 02',
+                link:'',   
+            },
+            {
+                linkname:'About us 03',
+                link:'',   
+            },
+            {
+                linkname:'Contact me',
+                link:'',   
+            },
+            {
+                linkname:'Contact us',
+                link:'',   
+            },
+            {
+                linkname:'Purchase Guide',
+                link:'',   
+            },
+            {
+                linkname:'Privacy Policy',
+                link:'',   
+            },
+            {
+                linkname:'Terms of Service',
+                link:'',   
+            },
+        ],
+        thirddropdown:[
+            {
+                linkname:'Courses Grid 01',
+                link:'',   
+            },
+            {
+                linkname:'Courses Grid 02',
+                link:'',   
+            },
+            {
+                linkname:'Courses Grid 03',
+                link:'',   
+            },
+            {
+                linkname:'Membership Levels',
+                link:'',   
+            },
+            {
+                linkname:'Become a Teacher',
+                link:'',   
+            },
+            {
+                linkname:'Profile',
+                link:'',   
+            },
+            {
+                linkname:'Checkout',
+                link:'',   
+            },
+            {
+                linkname:'Single Layout',
+                link:'',   
+            },
+        ],
+        fourdropdown:[
+            {
+                linkname:'Events',
+                link:'',   
+            },
+            {
+                linkname:'Zoom Meetings',
+                link:'',   
+            },
+        ],
+        fifthdropdown:[
+            {
+                linkname:'Blog Grid',
+                link:'',   
+            },
+            {
+                linkname:'Blog Masonry',
+                link:'',   
+            },
+            {
+                linkname:'Blog Classic',
+                link:'',   
+            },
+            {
+                linkname:'Blog List',
+                link:'',   
+            },
+        ],
+        sixdropdown:[
+            {
+                linkname:'Shop Left Sidebar',
+                link:'',   
+            },
+            {
+                linkname:'Shop Right Sidebar',
+                link:'',   
+            },
+            {
+                linkname:'Cart',
+                link:'',   
+            },
+            {
+                linkname:'Wishlist',
+                link:'',   
+            },
+            {
+                linkname:'Single Product',
+                link:'',   
+            },
 
-
-
+        ],
         };
     },
     methods: {
@@ -62,25 +252,54 @@ export default {
                         <nav>
                             <ul class="dropdown" id="firstdropdown">
                                 <li v-for="(elem,index) in navbar" :key='index' class="dropbtn">
-                                    {{ elem.name }}
+                                    <span>{{ elem.name }}</span>
                                     <span>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </li>
-                                <ul class="dropdown-content" id="firstdropdown" >
+                                <ul class="dropdowncontent" id="firstdropdown" >
                                     <li v-for="(elem,index) in firstdropdown" :key='index'>
                                         <RouterLink :to="{name: elem.link }">
                                             {{ elem.linkname }}
                                         </RouterLink> 
                                     </li>
                                 </ul>
-                                <ul class="dropdown-content" id="seconddropdown" >
+                                <ul class="dropdowncontent" id="seconddropdown" >
                                     <li v-for="(elem,index) in seconddropdown" :key='index'>
                                         <RouterLink :to="{name: elem.link }">
                                             {{ elem.linkname }}
                                         </RouterLink> 
                                     </li>
                                 </ul>
+                                <ul class="dropdowncontent" id="thirddropdown" >
+                                    <li v-for="(elem,index) in thirddropdown" :key='index'>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
+                                <ul class="dropdowncontent" id="fourdropdown" >
+                                    <li v-for="(elem,index) in fourdropdown" :key='index'>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
+                                <ul class="dropdowncontent" id="fifthdropdown" >
+                                    <li v-for="(elem,index) in fifthdropdown" :key='index'>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
+                                <ul class="dropdowncontent" id="sixdropdown" >
+                                    <li v-for="(elem,index) in sixdropdown" :key='index'>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
+
                             </ul>
                         </nav>
                     </div>
@@ -158,37 +377,47 @@ input[type=text] {
   color: black;
 }
 
-.dropdown {
+.dropdown li span{
   position: relative;
   display: inline-block;
+  border: 1px solid red;
 }
 
-.dropdown-content {
+.dropdowncontent {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 200px;
+  width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border: 1px solid blue;
+
 }
 
-.dropdown-content li {
+.dropdowncontent li a{
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  border: 1px solid violet;
 }
 
-.dropdown-content li:hover {
+.dropdowncontent a:hover {
     background-color: #ddd;
+    border: 1px solid green;
+
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdowncontent {
     display: block;
+    border: 1px solid black;
+
 }
 
- .dropdown:hover .dropbtn {
+ .dropbtn:hover span {
      color: #20AD96;
      text-decoration : underline;
+     border: 1px solid orange;
+
  }
 </style>
