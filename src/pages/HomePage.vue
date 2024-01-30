@@ -248,6 +248,15 @@ export default {
                 </div>
             </div>
         </section>
+
+        <div class="svg-container">
+            <img class="svg-curve d-block" src="../../public/course-portal/curvecolor.svg" alt="">
+        </div>
+        <!-- Slider section -->
+        <section class="slider-section py-5">
+            <h4>Great Words About MaxCoach</h4>
+            <h2>Our top learners' verbatim</h2>
+        </section>
     </main>
 </template>
 
@@ -557,5 +566,22 @@ export default {
 
         }
 
+    }
+
+    .svg-container{
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+
+        .svg-curve{
+            width: 200%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+        }
+    }
+    .slider-section{
+        background-color: $main-softgray-color;
     }
 </style>
