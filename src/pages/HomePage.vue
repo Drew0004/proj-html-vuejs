@@ -3,6 +3,7 @@ import HeroSection from '../components/HomePage-components/HeroSection.vue';
 import OnlineCourseSection from '../components/HomePage-components/OnlineCourseSection.vue';
 import SmartTutoringSection from '../components/HomePage-components/SmartTutoringSection.vue'
 import YtVideoSection from '../components/HomePage-components/YtVideoSection.vue'
+import SliderSection from '../components/HomePage-components/SliderSection.vue'
 
 export default {
     data() {
@@ -17,6 +18,7 @@ export default {
         OnlineCourseSection,
         SmartTutoringSection,
         YtVideoSection,
+        SliderSection,
     }
 }
 </script>
@@ -34,15 +36,8 @@ export default {
         <div class="svg-container">
             <img class="svg-curve d-block" src="../../public/course-portal/curvecolor.svg" alt="">
         </div>
-        <!-- Slider section -->
-        <section class="slider-section py-5">
-            <div class="container">
-                <div class="text-center">
-                    <h4>Great Words About MaxCoach</h4>
-                    <h2>Our <span>top learners'</span> verbatim</h2>
-                </div>
-            </div>
-        </section>
+        <SliderSection/>
+
     </main>
 </template>
 
@@ -60,22 +55,6 @@ export default {
             height: 100%;
             position: absolute;
             right: 0;
-        }
-    }
-    .slider-section{
-        background-color: $main-softgray-color;
-
-        h4{
-            text-transform: uppercase;
-            color: $main-indigo-color;
-        }
-
-        h2{
-            color: $main-purple-color;
-
-            span{
-                color: $main-green-color;
-            }
         }
     }
 </style>
