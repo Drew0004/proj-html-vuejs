@@ -114,6 +114,7 @@ export default {
                         <img :src="elem.imgtimeline" alt="">
                     </div>
                 </div>
+                <div class="time_line"></div>
                 <div class="container-text">
                     <h4>{{elem.titletimeline}}</h4>
                     <p>{{elem.texttimeline}}</p>
@@ -140,7 +141,7 @@ export default {
     object-fit:cover;
     object-position: center;
     image-rendering:optimizeQuality;
-    filter: blur(5px);
+    filter: blur(2px);
 }
 
 .text{
@@ -202,11 +203,30 @@ i{
     justify-content: space-between;
     padding: 20px;
     margin: 20px;
+    position: relative;
 }
    
 .container-text, .top-container-text{
     width: 50%;
     border: 2px solid blue;
+    padding: 30px;
 }   
 
+.container-text{
+    margin-top: 70px;
+}
+
+.top-container-text h3{
+    margin-bottom: 40px;
+    text-align: right;
+    color:#20AD96 ;
+    margin-right: 40px;
+}
+.time-line{
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    height: 100%;
+    border-left: 2px solid #e2e2e8;
+}
 </style>
