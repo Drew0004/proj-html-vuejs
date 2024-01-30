@@ -5,17 +5,17 @@ export default {
             current: 0,
             slides:[
             {
-                image: '../../public/course-portal/images/course-02-480x298.jpg',
+                image: '../../public/course-portal/images/corousel1.jpg',
                 title: 'AWAKEN YOUR GIFTS NOW',
                 secondtitle:'01 INSPIRING CURRICULUM',
                 text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe molestiae ut quisquam ex provident unde quam veritatis excepturi, quaerat tenetur!',
             }, {
-                image: '../../public/course-portal/images/course-featured-image-01-480x298.jpg',
+                image: '../../public/course-portal/images/corousel2.jpg',
                 title: 'OPEN UP A BRIGHT SKY',
                 secondtitle:'02 LIFE CONSULTING',
                 text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe molestiae ut quisquam ex provident unde quam veritatis excepturi, quaerat tenetur!',
             },{
-                image: '../../public/course-portal/images/stock-full-hd-03-480x298.jpg',
+                image: '../../public/course-portal/images/corousel3.jpg',
                 title: 'WRITE YOUR OWN LIFE BOOK',
                 secondtitle:'03 SKILL ADVANCEMENT',
                 text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe molestiae ut quisquam ex provident unde quam veritatis excepturi, quaerat tenetur!',
@@ -24,26 +24,26 @@ export default {
         timeline:[
             {
                 sectiontimeline:'BROADENING',
-                imgtimeline:'../../public/course-portal/images/testimonial-avata-01.jpg',
+                imgtimeline:'../../public/course-portal/images/toppages1.jpg',
                 titletimeline:'#1 Career advancement and hobbies',
                 texttimeline:'Studying online gives you more flexibility. You can work and fit your work schedule around your coursework more easily; even more so if you are taking an asynchronous class: an online class where you can study and interact with your instructor and fellow classmates at your own pace.',
             },
             {
                 sectiontimeline:'SCHEDULING',
-                imgtimeline:'../../public/course-portal/images/testimonial-avata-02.jpg',
+                imgtimeline:'../../public/course-portal/images/toppages2.jpg',
                 titletimeline:'#2 Flexible schedule & environment',
                 texttimeline:'Taking an online course also means that you don’t have to commute to class, which means less time spent on the bus and more study time sitting on your couch, the sound of a crackling fireplace in the background. You no longer have to worry about missing an important class!',
             },
             {
                 sectiontimeline:'SELF-DISCIPLINE',
-                imgtimeline:'../../public/course-portal/images/testimonial-avata-03.jpg',
+                imgtimeline:'../../public/course-portal/images/toppages3.jpg',
                 titletimeline:'#3 Self-discipline & responsibility',
                 texttimeline:'Who says that having to be more self-disciplined is a disadvantage? It is true that studying online requires more time-management skills, because you will spend a lot of time on your own without someone physically close to keep you focused on deadlines. ',
             },
 
             {
                 sectiontimeline:'INVESTMENT',
-                imgtimeline:'../../public/course-portal/images/testimonial-avata-04.jpg',
+                imgtimeline:'../../public/course-portal/images/toppages4.jpg',
                 titletimeline:'#2 Flexible schedule & environment',
                 texttimeline:'Studying online means that you pay the tuition fee, possibly book supplies, an online application fee, and few other items. You don’t, however, incur the costs of housing (which can range up to $12,000 per year) and transportation, which translates to lower debts and more savings.',
             },
@@ -138,7 +138,7 @@ export default {
     width: 100%;
     height: 100%;
     object-fit:cover;
-    object-position:top center;
+    object-position: center;
     image-rendering:optimizeQuality;
     filter: blur(5px);
 }
