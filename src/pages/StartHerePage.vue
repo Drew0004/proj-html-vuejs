@@ -120,6 +120,14 @@ export default {
                     <p>{{elem.texttimeline}}</p>
                 </div>
             </div>
+            <div class="text-center p-4 mb-4">
+                <h4>GET YOURSELF A MAXCOACH ID?</h4>
+                <h2>Take your interest and register an online class today to enjoy life fully</h2>
+                <button class="button"><strong>Get started for free</strong></button>
+            </div>
+            <div class="sectioncards">
+
+            </div>
         </div>
     </main>
 </template>
@@ -204,16 +212,24 @@ i{
     padding: 20px;
     margin: 20px;
     position: relative;
+    flex-direction: row-reverse;
 }
+
+.timelinecontainer:nth-child(2n){
+    flex-direction: row;
+    
+}
+
    
 .container-text, .top-container-text{
     width: 50%;
-    border: 2px solid blue;
+    // border: 2px solid blue;
     padding: 30px;
 }   
 
 .container-text{
     margin-top: 70px;
+    line-height: 30px
 }
 
 .top-container-text h3{
@@ -228,5 +244,25 @@ i{
     margin-left: -1px;
     height: 100%;
     border-left: 2px solid #e2e2e8;
+}
+
+.button {
+  background-color: #20AD96;
+  border: none;
+  color: white;
+  padding: 16px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #3F3A64;
+  color: white;
 }
 </style>
