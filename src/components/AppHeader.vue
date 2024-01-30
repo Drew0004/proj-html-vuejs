@@ -2,185 +2,43 @@
 export default {
     data() {
         return {
-            navbar:[
+        navbar:[
             {
-                name:"Home",
-                list:[
-                    {
-                    link:'MaxCoach Education',
-                    },
-                    {
-                    link:'Course Portal',
-                    },
-                    {
-                    link:'Distant Learning',
-                    },
-                    {
-                    link:'Multimedia Pedagogy',
-                    },
-                    {
-                    link:'Modern Schooling',
-                    },
-                    {
-                    link:'Remote Training',
-                    },
-                    {
-                    link:'Health Coaching',
-                    },
-                    {
-                    link:'Gym Coaching',
-                    },
-                    {
-                    link:'Business',
-                    },
-                    {
-                    link:'Artist',
-                    },
-                    {
-                    link:'Kitchen Coach',
-                    },
-                    {
-                    link:'Motivation',
-                    },
-                    {
-                    link:'Dancing',
-                    },
-                    {
-                    link:'Guitar',
-                    },
-                    {
-                    link:'Yoga',
-                    },
-                    {
-                    link:'Photography',
-                    },
-                    {
-                    link:'Personal Finance',
-                    },
-                    {
-                    link:'Sales Coaching',
-                    },
-                    {
-                    link:'Mental Therapy',
-                    },
-                ]
-            }, 
-            {
-                name:"Pages",
-                list:[
-                    {
-                    link:'Start Here',
-                    },
-                    {
-                    link:'Success Story',
-                    },
-                    {
-                    link:'About me',
-                    },
-                    {
-                    link:'About us 01',
-                    },
-                    {
-                    link:'About us 02',
-                    },
-                    {
-                    link:'About us 03',
-                    },
-                    {
-                    link:'Contact me',
-                    },
-                    {
-                    link:'Contact us',
-                    },
-                    {
-                    link:'Purchase Guide',
-                    },
-                    {
-                    link:'Privacy Policy',
-                    },
-                    {
-                    link:'Terms of Service',
-                    },
-                ]
+                name:'Home',
+                link:'#',
             },
             {
-                name:"Courses",
-                list:[
-                {
-                    link:'Courses Grid 01',
-                    },
-                    {
-                    link:'Courses Grid 02',
-                    },
-                    {
-                    link:'Courses Grid 03',
-                    },
-                    {
-                    link:'Membership Levels',
-                    },
-                    {
-                    link:'Become a Teacher',
-                    },
-                    {
-                    link:'Profile',
-                    },
-                    {
-                    link:'Checkout',
-                    },
-                    {
-                    link:'Single Layout',
-                    },
-                ]
+                name:'Pages',
+                link:'#',
             },
             {
-                name:"Features",
-                list:[
-                    {
-                    link:'Events',
-                    },
-                    {
-                    link:'Zoom Meetings',
-                    },
-                ]
+                name:'Course',
+                link:'#',
+            }
+        ],
+        firstdropdown:[
+            {
+                linkname:'MaxCoach Education:',
+                link:'home',   
             },
             {
-                name:"Blog",
-                list:[
-                    {
-                    link:'Blog Grid',
-                    },
-                    {
-                    link:'Blog Masonry',
-                    },
-                    {
-                    link:'Blog Classic',
-                    },
-                    {
-                    link:'Blog List',
-                    },
-                ]
+                linkname:'Course Portal:',
+                link:'home',   
+            },
+        ],
+        seconddropdown:[
+            {
+                linkname:'Start Here',
+                link:'StartHerePage',   
             },
             {
-                name:"Shop",
-                list:[
-                    {
-                    link:'Shop Left Sidebar',
-                    },
-                    {
-                    link:'Shop Right Sidebar',
-                    },
-                    {
-                    link:'Cart',
-                    },
-                    {
-                    link:'Wishlist',
-                    },
-                    {
-                    link:'Single Product',
-                    },
-                ]
+                linkname:'Course Portal:',
+                link:'',   
             },
         ]
+
+
+
         };
     },
     methods: {
@@ -200,24 +58,33 @@ export default {
                     <div class="container_img_header">
                         <img src="../../public/course-portal/images/dark-logo.png" alt="">
                     </div>
-                    <div v-for="(elem,index) in navbar" :key='index'>
+                    <div >
                         <nav>
-                            <ul class="dropdown">
-                                <li class="dropbtn">
+                            <ul class="dropdown" id="firstdropdown">
+                                <li v-for="(elem,index) in navbar" :key='index' class="dropbtn">
                                     {{ elem.name }}
+                                    <span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
                                 </li>
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                <div class="dropdown-content">
-                                    <ul>
-                                        <li v-for="(elem2,index2) in elem.list" :key='index2'>
-                                            <a href="#"> {{ elem2.link }}</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="dropdown-content" id="firstdropdown" >
+                                    <li v-for="(elem,index) in firstdropdown" :key='index'>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
+                                <ul class="dropdown-content" id="seconddropdown" >
+                                    <li v-for="(elem,index) in seconddropdown" :key='index'>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
                             </ul>
                         </nav>
+                    </div>
+
                         <!-- <nav>
                             <ul>
                                 <li> 
@@ -240,7 +107,7 @@ export default {
                                 </li>
                             </ul>
                         </nav> -->
-                    </div>
+                    
                     <div>
                         <i class="fa-regular fa-circle-user"></i> 
                     </div>
@@ -305,14 +172,14 @@ input[type=text] {
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content li {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-content li:hover {
     background-color: #ddd;
 }
 
@@ -320,8 +187,8 @@ input[type=text] {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    color: #20AD96;
-    text-decoration : underline;
-}
+ .dropdown:hover .dropbtn {
+     color: #20AD96;
+     text-decoration : underline;
+ }
 </style>
