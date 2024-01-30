@@ -4,6 +4,7 @@ import OnlineCourseSection from '../components/HomePage-components/OnlineCourseS
 import SmartTutoringSection from '../components/HomePage-components/SmartTutoringSection.vue'
 import YtVideoSection from '../components/HomePage-components/YtVideoSection.vue'
 import SliderSection from '../components/HomePage-components/SliderSection.vue'
+import CounterSection from '../components/HomePage-components/CounterSection.vue'
 
 export default {
     data() {
@@ -19,6 +20,7 @@ export default {
         SmartTutoringSection,
         YtVideoSection,
         SliderSection,
+        CounterSection,
     }
 }
 </script>
@@ -37,6 +39,8 @@ export default {
             <img class="svg-curve d-block" src="../../public/course-portal/curvecolor.svg" alt="">
         </div>
         <SliderSection/>
+
+        <CounterSection/>
 
     </main>
 </template>

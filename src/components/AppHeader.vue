@@ -330,7 +330,7 @@ export default {
                         <i class="fa-regular fa-circle-user"></i> 
                     </div>
                     <div>
-                        <input v-model="search" @keyup.enter="search" type="text" >
+                        <!-- <input v-model="search" @keyup.enter="search" type="text" > -->
                     </div>
                 </div>
             </div>
