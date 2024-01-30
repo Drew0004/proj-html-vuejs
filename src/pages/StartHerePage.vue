@@ -24,32 +24,29 @@ export default {
         timeline:[
             {
                 sectiontimeline:'BROADENING',
-                imgtimeline:'',
+                imgtimeline:'../../public/course-portal/images/testimonial-avata-01.jpg',
                 titletimeline:'#1 Career advancement and hobbies',
                 texttimeline:'Studying online gives you more flexibility. You can work and fit your work schedule around your coursework more easily; even more so if you are taking an asynchronous class: an online class where you can study and interact with your instructor and fellow classmates at your own pace.',
             },
             {
                 sectiontimeline:'SCHEDULING',
-                imgtimeline:'',
+                imgtimeline:'../../public/course-portal/images/testimonial-avata-02.jpg',
                 titletimeline:'#2 Flexible schedule & environment',
                 texttimeline:'Taking an online course also means that you don’t have to commute to class, which means less time spent on the bus and more study time sitting on your couch, the sound of a crackling fireplace in the background. You no longer have to worry about missing an important class!',
             },
             {
                 sectiontimeline:'SELF-DISCIPLINE',
-                imgtimeline:'',
+                imgtimeline:'../../public/course-portal/images/testimonial-avata-03.jpg',
                 titletimeline:'#3 Self-discipline & responsibility',
                 texttimeline:'Who says that having to be more self-disciplined is a disadvantage? It is true that studying online requires more time-management skills, because you will spend a lot of time on your own without someone physically close to keep you focused on deadlines. ',
             },
 
             {
                 sectiontimeline:'INVESTMENT',
-                imgtimeline:'',
+                imgtimeline:'../../public/course-portal/images/testimonial-avata-04.jpg',
                 titletimeline:'#2 Flexible schedule & environment',
                 texttimeline:'Studying online means that you pay the tuition fee, possibly book supplies, an online application fee, and few other items. You don’t, however, incur the costs of housing (which can range up to $12,000 per year) and transportation, which translates to lower debts and more savings.',
             },
-
-
-
         ]
         }
     },
@@ -111,8 +108,12 @@ export default {
                 <h2>Best chances for expanding your success to the max</h2>
             </div>
             <div v-for="(elem,index) in timeline" class="timelinecontainer">
-                <h3> {{elem.sectiontimeline}} </h3>
-                <img src="" alt="">
+                <div class="top-container-text">
+                    <h3> {{elem.sectiontimeline}} </h3>
+                    <div class="container-img">
+                        <img :src="elem.imgtimeline" alt="">
+                    </div>
+                </div>
                 <div class="container-text">
                     <h4>{{elem.titletimeline}}</h4>
                     <p>{{elem.texttimeline}}</p>
@@ -203,5 +204,9 @@ i{
     margin: 20px;
 }
    
-   
+.container-text, .top-container-text{
+    width: 50%;
+    border: 2px solid blue;
+}   
+
 </style>
