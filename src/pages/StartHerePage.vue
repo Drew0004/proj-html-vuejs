@@ -20,6 +20,36 @@ export default {
                 secondtitle:'03 SKILL ADVANCEMENT',
                 text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe molestiae ut quisquam ex provident unde quam veritatis excepturi, quaerat tenetur!',
             },
+        ],
+        timeline:[
+            {
+                sectiontimeline:'BROADENING',
+                imgtimeline:'',
+                titletimeline:'#1 Career advancement and hobbies',
+                texttimeline:'Studying online gives you more flexibility. You can work and fit your work schedule around your coursework more easily; even more so if you are taking an asynchronous class: an online class where you can study and interact with your instructor and fellow classmates at your own pace.',
+            },
+            {
+                sectiontimeline:'SCHEDULING',
+                imgtimeline:'',
+                titletimeline:'#2 Flexible schedule & environment',
+                texttimeline:'Taking an online course also means that you don’t have to commute to class, which means less time spent on the bus and more study time sitting on your couch, the sound of a crackling fireplace in the background. You no longer have to worry about missing an important class!',
+            },
+            {
+                sectiontimeline:'SELF-DISCIPLINE',
+                imgtimeline:'',
+                titletimeline:'#3 Self-discipline & responsibility',
+                texttimeline:'Who says that having to be more self-disciplined is a disadvantage? It is true that studying online requires more time-management skills, because you will spend a lot of time on your own without someone physically close to keep you focused on deadlines. ',
+            },
+
+            {
+                sectiontimeline:'INVESTMENT',
+                imgtimeline:'',
+                titletimeline:'#2 Flexible schedule & environment',
+                texttimeline:'Studying online means that you pay the tuition fee, possibly book supplies, an online application fee, and few other items. You don’t, however, incur the costs of housing (which can range up to $12,000 per year) and transportation, which translates to lower debts and more savings.',
+            },
+
+
+
         ]
         }
     },
@@ -35,12 +65,18 @@ export default {
           if (this.current < 0)
             this.current = this.slides.length - 1;
         },
+    },
+    mounted(){
+        setInterval(this.leftSlide, 4000);
     }
+
 }
 </script>
 
 <template>
     <main>
+        
+        <!-- INIZIO CAROSELLO -->
         <div class="mycontainer">
             <div class="slider-wrapper">
                 <div class="item" v-for="(slide,index) in slides" :class="{visibility:current!=index}"> 
@@ -67,24 +103,35 @@ export default {
                 </div>
             </div>
         </div>
+        <!-- FINE CAROSELLO-->
+        <!-- START PAGE -->
+        <div class="container">
+            <div class="text-center">
+                <h4>FOUR MAJOR STEPS TO SUCCESS</h4>
+                <h2>Best chances for expanding your success to the max</h2>
+            </div>
+            <div v-for="(elem,index) in timeline" class="timelinecontainer">
+                <h3> {{elem.sectiontimeline}} </h3>
+                <img src="" alt="">
+                <div class="container-text">
+                    <h4>{{elem.titletimeline}}</h4>
+                    <p>{{elem.texttimeline}}</p>
+                </div>
+            </div>
+        </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
+// STILE CAROSELLO
 .visibility{
     display: none;
 }
-.mycontainer .slider-wrapper{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    width: 100%;
-    height: 500px;
-}
 .slider-wrapper .item{
     height: 850px;
-    // border: 2px solid red;
+    // border: 2px solid blue;
     position: relative;
+    margin-bottom: 40px;
 }
 .item img {
     width: 100%;
@@ -146,8 +193,15 @@ i{
     top: 50%;
     left: 0px;
 }
-   
-   
+// FINE STILE CAROSELLO
+
+// INIZIO STILE PAGINA
+.timelinecontainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+}
    
    
 </style>
