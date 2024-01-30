@@ -5,6 +5,7 @@ import SmartTutoringSection from '../components/HomePage-components/SmartTutorin
 import YtVideoSection from '../components/HomePage-components/YtVideoSection.vue'
 import SliderSection from '../components/HomePage-components/SliderSection.vue'
 import CounterSection from '../components/HomePage-components/CounterSection.vue'
+import BlogSection from '../components/HomePage-components/BlogSection.vue';
 
 export default {
     data() {
@@ -21,6 +22,7 @@ export default {
         YtVideoSection,
         SliderSection,
         CounterSection,
+        BlogSection,
     }
 }
 </script>
@@ -41,6 +43,8 @@ export default {
         <SliderSection/>
 
         <CounterSection/>
+
+        <BlogSection/>
 
     </main>
 </template>
