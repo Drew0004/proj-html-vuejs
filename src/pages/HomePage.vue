@@ -205,6 +205,25 @@ export default {
                 </div>
             </div>
         </section>
+
+        <!-- YT video section -->
+        <section class="yt-video-section py-5">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-6 p-0 border">
+                        <router-link :to="{ name: 'YtVideo'}">
+                            <div class="yt-vid-container rounded-3">
+                                <img class="w-100 yt-vid-img" src="../../public/course-portal/images/home-2-popup-video-poster.jpg" alt="Yt vid">
+                                <img class="yt-logo" src="../../public/course-portal/images/icon-youtube-play.png" alt="Yt logo">
+                            </div>
+                        </router-link>
+                    </div>
+                    <div class="col-5 border">
+                        testi
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -418,6 +437,28 @@ export default {
                 }
             }
 
+        }
+    }
+
+    .yt-video-section{
+        .yt-vid-container{
+            width: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            
+            &:hover .yt-vid-img{
+                transition: 1s ease-in-out;
+                scale: 1.1;
+            }
+            
+            .yt-logo{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 </style>

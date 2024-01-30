@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage.vue';
 import StartHerePage from './pages/StartHerePage.vue';
 import CustomerPage from './pages/CustomerPage.vue';
 import ErrorPage from './pages/ErrorPage.vue'
+import YtVideoPage from './pages/YtVideoPage.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,6 +22,11 @@ const router = createRouter({
             path: '/Customer',
             name: 'CustomerPage',
             component: CustomerPage,
+        },
+        {
+            path: '/OffcanvaVid',
+            name: 'YtVideo',
+            component: YtVideoPage,
         },
         {
             path: '/:pathMatch(.*)*',
