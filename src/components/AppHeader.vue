@@ -12,101 +12,105 @@ export default {
                     dropdown: [
                         {
                             items: [
-                            {
-                            linkname: 'MaxCoach Education',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Course Portal',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Distant Learning',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Multimedia Pedagogy',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Modern Schooling',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Remote Training',
-                            link: 'home',
-                        },
+                                {
+                                    linkname: 'MaxCoach Education',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Course Portal',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Distant Learning',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Multimedia Pedagogy',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Modern Schooling',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Remote Training',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'MaxCoach Education',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Course Portal',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Gym Coaching',
+                                    link: 'home',
+                                },
                             ]
                         },
                         {
                             items: [
-                            {
-                                linkname: 'MaxCoach Education',
-                                link: 'home',
-                            },
-                            {
-                                linkname: 'Course Portal',
-                                link: 'home',
-                            },                        
-                            {
-                                linkname: 'Gym Coaching',
-                                link: 'home',
-                            },
-                            {
-                                linkname: 'Business',
-                                link: 'home',
-                            },
-                            {
-                                linkname: 'Artist',
-                                link: 'home',
-                            },
-                            {
-                                linkname: 'Kitchen Coach',
-                                link: 'home',
-                            },
-
-                            ]
+                                {
+                                    linkname: 'Business',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Artist',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Kitchen Coach',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Motivation',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Dancing',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Guitar',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Photography',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Personal Finance',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Sales Coaching',
+                                    link: 'home',
+                                },
+                                {
+                                    linkname: 'Mental Therapy',
+                                    link: 'home',
+                                },
+                            ],
                         },
                         {
                             items: [
-                            {
-                            linkname: 'Motivation',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Dancing',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Guitar',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Photography',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Personal Finance',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Sales Coaching',
-                            link: 'home',
-                        },
-                        {
-                            linkname: 'Mental Therapy',
-                            link: 'home',
-                        },
+                                {
+                                    linkname: '',
+                                    link: '',
+                                    img: '../../public/course-portal/images/homepages-mega-menu-image-alt.jpg',
+                                },
                             ]
                         }
                     ],
-                    },
-                    {
-                        name: 'Pages',
-                        link: '#',
-                        dropdown: [
-                            {
-                                items: [
+                },
+                {
+                    name: 'Pages',
+                    link: '#',
+                    dropdown: [
+                        {
+                            items: [
                                 {
                                     linkname: 'Start Here',
                                     link: 'StartHerePage',
@@ -151,51 +155,51 @@ export default {
                                     linkname: 'Terms of Service',
                                     link: '',
                                 },
-                                ]
-                            },
-                        ]
+                            ]
                         },
+                    ]
+                },
+                {
+                    name: 'Course',
+                    link: '#',
+                    dropdown: [
                         {
-                            name: 'Course',
-                            link: '#',
-                            dropdown: [
+                            items: [
                                 {
-                                    items:[
+                                    linkname: 'Courses Grid 01',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Courses Grid 02',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Courses Grid 03',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Membership Levels',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Become a Teacher',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Profile',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Checkout',
+                                    link: '',
+                                },
+                                {
+                                linkname: 'Single Layout',
+                                link: '',
+                                dropdownhover:[
                                     {
-                                        linkname: 'Courses Grid 01',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Courses Grid 02',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Courses Grid 03',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Membership Levels',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Become a Teacher',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Profile',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Checkout',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Single Layout',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Free Course',
-                                        link: 'CustomerPage',
+                                    linkname: 'Free Course',
+                                    link: 'CustomerPage',
                                     },
                                     {
                                         linkname: 'Sticky Features Bar',
@@ -209,87 +213,89 @@ export default {
                                         linkname: 'No Sidebar',
                                         link: '',
                                     },
-                                    ]
-                                }
+                                ]
+                                },
                             ]
-    
-                        },
+                        }
+                    ]
+
+                },
+                {
+                    name: 'Features',
+                    link: '#',
+                    dropdown: [
                         {
-                            name: 'Features',
-                            link: '#',
-                            dropdown: [
+                            items: [
                                 {
-                                    items:[
-                                    {
-                                        linkname: 'Events',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Zoom Meetings',
-                                        link: '',
-                                    },
-                                    ]
-                                }
+                                    linkname: 'Events',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Zoom Meetings',
+                                    link: '',
+                                },
                             ]
-    
-                        },
+                        }
+                    ]
+
+                },
+                {
+                    name: 'Blog',
+                    link: '#',
+                    dropdown: [
                         {
-                            name: 'Blog',
-                            link: '#',
-                            dropdown: [
+                            items: [
                                 {
-                                    items:[
-                                                {
-                                        linkname: 'Blog Grid',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Blog Masonry',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Blog Classic',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Blog List',
-                                        link: '',
-                                    },
-                                    ]
-                                }
+                                    linkname: 'Blog Grid',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Blog Masonry',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Blog Classic',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Blog List',
+                                    link: '',
+                                },
                             ]
-                        },
+                        }
+                    ]
+                },
+                {
+                    name: 'Shop',
+                    link: '#',
+                    dropdown: [
                         {
-                            name: 'Shop',
-                            link: '#',
-                            dropdown: [
+                            items: [
                                 {
-                                    items:[
-                                    {
-                                        linkname: 'Shop Left Sidebar',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Shop Right Sidebar',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Cart',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Wishlist',
-                                        link: '',
-                                    },
-                                    {
-                                        linkname: 'Single Product',
-                                        link: '',
-                                    },
-                                    ]
-                                }
+                                    linkname: 'Shop Left Sidebar',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Shop Right Sidebar',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Cart',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Wishlist',
+                                    link: '',
+                                },
+                                {
+                                    linkname: 'Single Product',
+                                    link: '',
+                                },
                             ]
-    
-                        },
+                        }
+                    ]
+
+                },
             ],
         };
     },
@@ -313,87 +319,29 @@ export default {
                         <div v-for="(elem,index) in navbar" :key='index' class="singlemenu">
                             <a href="http://">{{ elem.name }}</a>
                             <span class="p-2"><i class="fa-solid fa-angle-down"></i></span>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content" :class="{'w-1000': elem.dropdown.length>1}">
                                 <div class="dropdown-column" v-for="(column,col_index) in elem.dropdown" :key="col_index">
                                     <ul>
-                                        <li v-for="(item,item_index) in column.items" :key='item_index'>
+                                        <li v-for="(item,item_index) in column.items" :key='item_index' class="listitem" >
                                             <RouterLink :to="{name: item.link }">
                                             {{ item.linkname }}
                                             </RouterLink> 
+                                            <img v-if="item.img" :src="item.img" alt="">
+                                            <div v-if="item.dropdownhover" class="dropdownhover_content">
+                                                <ul>
+                                                    <li v-for="(drop,index) in item.dropdownhover">
+                                                        <RouterLink :to="{name: drop.link }">
+                                                        {{ drop.linkname }}
+                                                        </RouterLink> 
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </li>
                                     </ul>
-                                   
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <!-- <div class="dropdown-content" id="seconddropdown">
-                            <div v-for="(elem,index) in seconddropdown" :key='index'>
-                                <ul>
-                                    <li>
-                                        <RouterLink :to="{name: elem.link }">
-                                        {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="dropdown-content" id="thirddropdown">
-                            <div v-for="(elem,index) in thirddropdown" :key='index'>
-                                <ul>
-                                    <li>
-                                        <RouterLink :to="{name: elem.link }">
-                                         {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="dropdown-content" id="fifthdropdown">
-                            <div v-for="(elem,index) in fifthdropdown" :key='index'>
-                                <ul>
-                                    <li>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="dropdown-content" id="sixdropdown">
-                            <div v-for="(elem,index) in sixdropdown" :key='index'>
-                                <ul>
-                                    <li>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-                        <!-- <nav>
-                            <ul>
-                                <li> 
-                                    <RouterLink :to="{name:'home'}">Home</RouterLink> 
-                                </li>
-                                <li> 
-                                    <RouterLink :to="{name:'StartHerePage'}">Start Here</RouterLink> 
-                                </li>
-                                <li> 
-                                    <RouterLink :to="{name:'CustomerPage'}">Customer</RouterLink> 
-                                </li>
-                                <li> 
-                                    <RouterLink :to="{name:'not-found'}">Errore</RouterLink> 
-                                </li>
-                                <li>
-                                    <i class="fa-regular fa-circle-user"></i>
-                                </li>
-                                <li>
-                                    <input v-model="search" @keyup.enter="search" type="text" >
-                                </li>
-                            </ul>
-                        </nav> -->
                     <div>
                         <i class="fa-regular fa-circle-user"></i> 
                     </div>
@@ -412,6 +360,10 @@ export default {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
 }
 
 .nav_container{
@@ -442,6 +394,7 @@ ul{
 
     li a{
        color: grey;
+       padding: 20px;
     }
 
 }
@@ -467,6 +420,23 @@ input[type=text] {
     display: inline-block;
     padding: 20px;
     font-size: 1.2em;
+
+    &:after{
+        content: ' ';
+        height: 2px;
+        width: 0;
+        background-color: #20ad96;
+        display: block;
+        transition: all .3s ease-in-out;
+
+    }
+
+    &:hover{
+        &:after{
+            width: 100%;
+        }
+    }
+
 }
 .dropdown {
   position: relative;
@@ -477,14 +447,50 @@ input[type=text] {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 100;
+  margin-top: 20px;
+  border-bottom: 5px solid #20ad96 ;
 }
 
 .singlemenu:hover .dropdown-content {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-column{
+    display: flex;
+    // border: 1px solid red;
+}
+
+.w-1000{
+    width: 1200px;
+    right: -30%;
+}
+
+.dropdownhover_content{
+    position: absolute;
+    left: 160px;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    border-bottom: 5px solid #20ad96 ;
+    text-align: left;
+}
+
+.listitem{
+    position: relative;
+
+    &:hover{
+        .dropdownhover_content{
+            display: block;
+
+        }
+
+    }
 }
 
 

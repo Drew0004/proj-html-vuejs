@@ -200,6 +200,8 @@ export default {
                     </div>
                 </div>
             </div>
+        <!-- FINE CARD -->
+        <!-- INIZIO ACCORDATION -->
         <div class="container text-center mt-5 mb-5">
             <h5>SUCCEED WITH <strong>MAXCOACH</strong></h5>
             <h2>Frequently asked questions</h2>
@@ -329,7 +331,6 @@ i{
         text-align: left;
     }
 
-    
 }
 .container-text, .top-container-text{
     width: 50%;
@@ -372,6 +373,7 @@ i{
   color: white;
 }
 // FINE SEZIONE TIMELINE
+
 // INIZIO SEZIONE FOTO TEAM
 .sectioncards{
     display: flex;
@@ -398,13 +400,16 @@ i{
     width: 100%;
     height: 100%;
     backdrop-filter: blur(2px);
-    font-size: 1.4em;
+    font-size: 1.6em;
     display: none;
     color: white;
 }
 
 .card:hover .info_card{
-    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 // FINE FOTO template
 // INIZIO FAQ
