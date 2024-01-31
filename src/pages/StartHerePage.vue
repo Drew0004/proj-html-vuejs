@@ -85,32 +85,32 @@ export default {
                 profession:'Writer',
             },
         ],
-        // faq:[
-        //     {
-        //         question:'How to register online?',
-        //         answer:'Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started.',
-        //     },
-        //     {
-        //         question:'How do I contact support?',
-        //         answer:'You can contact our help center or any contact method (phone call, email or appear at our office) to get help. ',
-        //     },
-        //     {
-        //         question:'How do I customize my account?',
-        //         answer:'In order to customize your account’s information, just log in with the provided passcode and change the info.',
-        //     },
-        //     {
-        //         question:'How to cancel my membership?',
-        //         answer:'You just need to submit a membership termination request, we’ll proceed within 24 hours.',
-        //     },
-        //     {
-        //         question:'How do you process my information?',
-        //         answer:'Your data will be kept private and secure on our database. No illegal use without prior notice.',
-        //     },
-        //     {
-        //         question:'How can I get a discount?',
-        //         answer:'Learners can get a discount by coupon or voucher. If you have one, fill in the code box before making any payment.',
-        //     },
-        // ]
+         faq:[
+             {
+                 question:'How to register online?',
+                 answer:'Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started.',
+            },
+            {
+                question:'How do I contact support?',
+                answer:'You can contact our help center or any contact method (phone call, email or appear at our office) to get help. ',
+            },
+            {
+                question:'How do I customize my account?',
+                answer:'In order to customize your account’s information, just log in with the provided passcode and change the info.',
+            },
+            {
+                question:'How to cancel my membership?',
+                answer:'You just need to submit a membership termination request, we’ll proceed within 24 hours.',
+            },
+            {
+                question:'How do you process my information?',
+                answer:'Your data will be kept private and secure on our database. No illegal use without prior notice.',
+            },
+            {
+                question:'How can I get a discount?',
+                answer:'Learners can get a discount by coupon or voucher. If you have one, fill in the code box before making any payment.',
+            },
+        ]
         }
     },
     methods: {
@@ -203,7 +203,21 @@ export default {
         <div class="container text-center mt-5 mb-5">
             <h5>SUCCEED WITH <strong>MAXCOACH</strong></h5>
             <h2>Frequently asked questions</h2>
-            <div class="Faq">
+            <div class="Faq mt-5 mb-5">
+                <div v-for="(accordation,index) in faq" class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                {{ accordation.question }}
+                            </button>
+                        </div>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>{{ accordation.answer }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -294,12 +308,15 @@ i{
 
 .timelinecontainer:nth-child(2n){
     flex-direction: row;
+    text-align: left;
+    
 }
 .container-text, .top-container-text{
     width: 50%;
     // border: 2px solid blue;
     padding: 30px;
 }   
+
 
 .container-text{
     margin-top: 70px;
