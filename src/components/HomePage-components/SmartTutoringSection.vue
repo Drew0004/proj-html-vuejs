@@ -81,6 +81,7 @@ export default {
 
                 &:hover{
                     color: $main-green-color;
+                    border-bottom: 0.5px solid rgb(234, 234, 234);
                 }
             }
 
