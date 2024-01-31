@@ -1,4 +1,6 @@
 <script>
+import { bottom } from '@popperjs/core';
+
 
 export default {
     data() {
@@ -146,66 +148,66 @@ export default {
                 },
             ],
             thirddropdown: [
-                {
-                    linkname: 'Courses Grid 01',
-                    link: '',
-                },
-                {
-                    linkname: 'Courses Grid 02',
-                    link: '',
-                },
-                {
-                    linkname: 'Courses Grid 03',
-                    link: '',
-                },
-                {
-                    linkname: 'Membership Levels',
-                    link: '',
-                },
-                {
-                    linkname: 'Become a Teacher',
-                    link: '',
-                },
-                {
-                    linkname: 'Profile',
-                    link: '',
-                },
-                {
-                    linkname: 'Checkout',
-                    link: '',
-                },
-                {
-                    linkname: 'Single Layout',
-                    link: '',
-                },
+                 {
+                     linkname: 'Courses Grid 01',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Courses Grid 02',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Courses Grid 03',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Membership Levels',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Become a Teacher',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Profile',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Checkout',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Single Layout',
+                     link: '',
+                 },
             ],
             fourdropdown: [
-                {
-                    linkname: 'Events',
-                    link: '',
-                },
-                {
-                    linkname: 'Zoom Meetings',
-                    link: '',
-                },
+                 {
+                     linkname: 'Events',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Zoom Meetings',
+                     link: '',
+                 },
             ],
             fifthdropdown: [
-                {
-                    linkname: 'Blog Grid',
-                    link: '',
-                },
-                {
-                    linkname: 'Blog Masonry',
-                    link: '',
-                },
-                {
-                    linkname: 'Blog Classic',
-                    link: '',
-                },
-                {
-                    linkname: 'Blog List',
-                    link: '',
-                },
+                 {
+                     linkname: 'Blog Grid',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Blog Masonry',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Blog Classic',
+                     link: '',
+                 },
+                 {
+                     linkname: 'Blog List',
+                     link: '',
+                 },
             ],
             sixdropdown: [
                 {
@@ -235,74 +237,67 @@ export default {
     // search(){
     // }
     },
-
+    components: { bottom }
 }
 </script>
 
 <template>
-    <header style="position: relative;">
+    <header>
         <div class="bg_header">
-            <div class="container">
+            <div class="container mycontainer">
                 <div class="nav_container">
                     <div class="container_img_header">
                         <img src="../../public/course-portal/images/dark-logo.png" alt="">
                     </div>
-                    <div>
-                        <nav>
-                            <ul class="dropdown" id="firstdropdown" style="position: relative;">
-                                <li v-for="(elem,index) in navbar" :key='index' class="dropbtn">
-                                    <span>{{ elem.name }}</span>
-                                    <span>
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </span>
-                                </li>
-                                <ul class="dropdowncontent" id="firstdropdown" >
-                                    <li v-for="(elem,index) in firstdropdown" :key='index'>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul> 
-                                <ul class="dropdowncontent" id="seconddropdown" >
-                                    <li v-for="(elem,index) in seconddropdown" :key='index'>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                                <ul class="dropdowncontent" id="thirddropdown" >
-                                    <li v-for="(elem,index) in thirddropdown" :key='index'>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                                <ul class="dropdowncontent" id="fourdropdown" >
-                                    <li v-for="(elem,index) in fourdropdown" :key='index'>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                                <ul class="dropdowncontent" id="fifthdropdown" >
-                                    <li v-for="(elem,index) in fifthdropdown" :key='index'>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                                <ul class="dropdowncontent" id="sixdropdown" >
-                                    <li v-for="(elem,index) in sixdropdown" :key='index'>
-                                        <RouterLink :to="{name: elem.link }">
-                                            {{ elem.linkname }}
-                                        </RouterLink> 
-                                    </li>
-                                </ul>
-                            </ul>
-                            
-                        </nav>
-                    </div>
+                    <div class="dropdown">
+                        <div v-for="(elem,index) in navbar" :key='index' class="singlemenu">
+                            {{ elem.name }}
+                        </div>
+                        <div class="dropdown-content">
+                            <div v-for="(elem,index) in firstdropdown" :key='index'>
+                                <RouterLink :to="{name: elem.link }">
+                                    {{ elem.linkname }}
+                                </RouterLink> 
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <div v-for="(elem,index) in seconddropdown" :key='index'>
+                                <RouterLink :to="{name: elem.link }">
+                                    {{ elem.linkname }}
+                                </RouterLink> 
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <div v-for="(elem,index) in thirddropdown" :key='index'>
+                                <RouterLink :to="{name: elem.link }">
+                                    {{ elem.linkname }}
+                                </RouterLink> 
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <div v-for="(elem,index) in fifthdropdown" :key='index'>
+                                <RouterLink :to="{name: elem.link }">
+                                    {{ elem.linkname }}
+                                </RouterLink> 
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <div v-for="(elem,index) in sixdropdown" :key='index'>
+                                <RouterLink :to="{name: elem.link }">
+                                    {{ elem.linkname }}
+                                </RouterLink> 
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <div v-for="(elem,index) in seconddropdown" :key='index'>
+                                <RouterLink :to="{name: elem.link }">
+                                    {{ elem.linkname }}
+                                </RouterLink> 
+                            </div>
+                        </div>
 
+
+                    </div>
                         <!-- <nav>
                             <ul>
                                 <li> 
@@ -325,12 +320,11 @@ export default {
                                 </li>
                             </ul>
                         </nav> -->
-                    
                     <div>
                         <i class="fa-regular fa-circle-user"></i> 
                     </div>
                     <div>
-                        <!-- <input v-model="search" @keyup.enter="search" type="text" > -->
+                        <input v-model="search" @keyup.enter="search" type="text" >
                     </div>
                 </div>
             </div>
@@ -349,6 +343,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid coral;
 }
 
 .container_img_header{
@@ -376,47 +371,26 @@ input[type=text] {
   color: black;
 }
 
-.dropdown li span{
+.singlemenu{
+    display: inline-block;
+    padding: 20px;
+}
+.dropdown {
   position: relative;
   display: inline-block;
-  border: 1px solid red;
 }
 
-.dropdowncontent {
+.dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  width: 100%;
+  background-color: #f9f9f9;
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border: 1px solid blue;
-
-}
-
-.dropdowncontent li a{
-  color: black;
   padding: 12px 16px;
-  text-decoration: none;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
-  border: 1px solid violet;
 }
-
-.dropdowncontent a:hover {
-    background-color: #ddd;
-    border: 1px solid green;
-
-}
-
-.dropdown:hover .dropdowncontent {
-    display: block;
-    border: 1px solid black;
-
-}
-
- .dropbtn:hover span {
-     color: #20AD96;
-     text-decoration : underline;
-     border: 1px solid orange;
-
- }
 </style>
