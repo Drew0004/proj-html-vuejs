@@ -47,7 +47,70 @@ export default {
                 titletimeline:'#2 Flexible schedule & environment',
                 texttimeline:'Studying online means that you pay the tuition fee, possibly book supplies, an online application fee, and few other items. You don’t, however, incur the costs of housing (which can range up to $12,000 per year) and transportation, which translates to lower debts and more savings.',
             },
-        ]
+        ],
+        cardsteam:[
+            {
+                imgteam:'../../public/course-portal/images/bottompages1.jpg',
+                nameteam:'Lonnie Marks',
+                profession:'Tutor',
+            },
+            {
+                imgteam:'../../public/course-portal/images/bottompages2.jpg',
+                nameteam:'Britney Salker',
+                profession:'Educator',
+            },
+            {
+                imgteam:'../../public/course-portal/images/bottompages3.jpg',
+                nameteam:'Bronnies Wallz',
+                profession:'Alumnis',
+            },
+            {
+                imgteam:'../../public/course-portal/images/bottompages4.jpg',
+                nameteam:'Mia Paulo',
+                profession:'Writer',
+            },
+            {
+                imgteam:'../../public/course-portal/images/bottompages5.jpg',
+                nameteam:'Lina Esthers',
+                profession:'Author',
+            },
+            {
+                imgteam:'../../public/course-portal/images/bottompages6.jpg',
+                nameteam:'Lorean McPhils',
+                profession:'Designer',
+            },
+            {
+                imgteam:'../../public/course-portal/images/bottompages7.jpg',
+                nameteam:'Anna Muray',
+                profession:'Writer',
+            },
+        ],
+        // faq:[
+        //     {
+        //         question:'How to register online?',
+        //         answer:'Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started.',
+        //     },
+        //     {
+        //         question:'How do I contact support?',
+        //         answer:'You can contact our help center or any contact method (phone call, email or appear at our office) to get help. ',
+        //     },
+        //     {
+        //         question:'How do I customize my account?',
+        //         answer:'In order to customize your account’s information, just log in with the provided passcode and change the info.',
+        //     },
+        //     {
+        //         question:'How to cancel my membership?',
+        //         answer:'You just need to submit a membership termination request, we’ll proceed within 24 hours.',
+        //     },
+        //     {
+        //         question:'How do you process my information?',
+        //         answer:'Your data will be kept private and secure on our database. No illegal use without prior notice.',
+        //     },
+        //     {
+        //         question:'How can I get a discount?',
+        //         answer:'Learners can get a discount by coupon or voucher. If you have one, fill in the code box before making any payment.',
+        //     },
+        // ]
         }
     },
     methods: {
@@ -101,7 +164,7 @@ export default {
             </div>
         </div>
         <!-- FINE CAROSELLO-->
-        <!-- START PAGE -->
+        <!-- START TIMELINE -->
         <div class="container">
             <div class="text-center">
                 <h4>FOUR MAJOR STEPS TO SUCCESS</h4>
@@ -123,10 +186,24 @@ export default {
             <div class="text-center p-4 mb-4">
                 <h4>GET YOURSELF A MAXCOACH ID?</h4>
                 <h2>Take your interest and register an online class today to enjoy life fully</h2>
-                <button class="button"><strong>Get started for free</strong></button>
+                <button class="button mb-4 mt-4"><strong>Get started for free</strong></button>
             </div>
+        </div>
+        <!-- FINE TIMELINE -->
+        <!-- INIZIO SEZIONE FOTO TEAM -->
             <div class="sectioncards">
-
+                <div v-for="(card,index) in cardsteam" class="card">
+                    <img :src="card.imgteam" alt="" />
+                    <div class="info_card">
+                        <h3>{{card.nameteam}}</h3>
+                        <h6>{{card.profession}}</h6>
+                    </div>
+                </div>
+            </div>
+        <div class="container text-center mt-5 mb-5">
+            <h5>SUCCEED WITH <strong>MAXCOACH</strong></h5>
+            <h2>Frequently asked questions</h2>
+            <div class="Faq">
             </div>
         </div>
     </main>
@@ -205,7 +282,7 @@ i{
 }
 // FINE STILE CAROSELLO
 
-// INIZIO STILE PAGINA
+// INIZIO STILE PAGINA TIMELINE
 .timelinecontainer{
     display: flex;
     justify-content: space-between;
@@ -217,10 +294,7 @@ i{
 
 .timelinecontainer:nth-child(2n){
     flex-direction: row;
-    
 }
-
-   
 .container-text, .top-container-text{
     width: 50%;
     // border: 2px solid blue;
@@ -265,4 +339,53 @@ i{
   background-color: #3F3A64;
   color: white;
 }
+// FINE SEZIONE TIMELINE
+// INIZIO SEZIONE FOTO TEAM
+.sectioncards{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    overflow: hidden;
+    // border: 2px solid red;
+}
+
+.card{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info_card {
+    position: absolute;
+    padding: 60px; 
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.101);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    font-size: 1.4em;
+    display: none;
+    color: white;
+}
+
+.card:hover .info_card{
+    display: block;
+}
+// FINE FOTO template
+// INIZIO FAQ
+// .Faq{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 30px;
+// }
+
+// .singleaccordation{
+//     background-color: #20AD96;
+//     padding: 20px;
+// }
+
 </style>
