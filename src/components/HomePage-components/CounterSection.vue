@@ -56,7 +56,7 @@ export default {
                 <div v-for="(singleCard, i) in cardData" class="col-3 card-data-container text-center">
                     <h3 class="fw-bold fs-2 mb-4">{{ singleCard.title }}</h3>
                     <h2 class="fw-bold display-1 mb-3">{{ singleCard.counter }}</h2>
-                    <h4 class="fs-5 fw-bold">{{ singleCard.category }}</h4>
+                    <h4 class="fs-6 fw-bold">{{ singleCard.category }}</h4>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@ export default {
     .card-data-container{
         border-left: 0.5px solid #F5F0EB;
         border-right: 0.5px solid #F5F0EB;
-        padding: 150px 50px;
+        padding: 100px 50px;
 
         h3{
             color: $main-purple-color;

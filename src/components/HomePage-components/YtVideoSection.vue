@@ -1,4 +1,5 @@
 <script>
+import * as bootstrap from 'bootstrap'
 export default {
     data() {
         return {
