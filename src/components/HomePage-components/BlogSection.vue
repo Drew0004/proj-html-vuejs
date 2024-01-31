@@ -67,7 +67,7 @@ export default {
                         </div>
                         <div class="lower-card p-4">
                             <h4 class="fw-light fs-6">{{ singleCard.class }}</h4>
-                            <h2 class="fw-bold fs-5">{{ singleCard.title }}</h2>
+                            <h2 class="fw-bold fs-6">{{ singleCard.title }}</h2>
                             <span class="fw-light me-4"><i class="fa-regular fa-calendar me-2"></i> {{ singleCard.date }}</span>
                             <span class="fw-light"><i class="fa-regular fa-eye me-2"></i> {{ singleCard.views }}</span>
                         </div>
@@ -117,9 +117,12 @@ export default {
     .my-card{
         border-radius: 5px;
         overflow: hidden;
+
+        img{
+            transition: 1s  ease-in-out;
+        }
         
         &:hover img{
-            transition: 1s ease-in-out;
             scale: 1.1;
             cursor: pointer;
         }

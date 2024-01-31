@@ -65,9 +65,12 @@ export default {
         overflow: hidden;
         position: relative;
         cursor: pointer;
+
+        .yt-vid-img{
+            transition: 1s ease-in-out;
+        }
         
         &:hover .yt-vid-img{
-            transition: 1s ease-in-out;
             scale: 1.1;
         }
         
