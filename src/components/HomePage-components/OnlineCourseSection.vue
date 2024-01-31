@@ -61,7 +61,7 @@ export default {
                 <h4 class="text-center fs-6 mb-3">Stimulated to learn?</h4>
                 <h2 class="text-center fw-bold mb-5">Featured Online Courses</h2>
 
-                <div class="row">
+                <div class="row g-0">
                     <div v-for="(singleCourse, i) in onlineCourse" class="course-card p-3 rounded-2">
                         <div class="col-5">
                             <div class="img-card">

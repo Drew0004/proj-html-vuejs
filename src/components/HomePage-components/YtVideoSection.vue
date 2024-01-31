@@ -15,7 +15,7 @@ export default {
     <section class="yt-video-section py-5">
         <div class="container">
             
-            <div class="row justify-content-between position-relative">
+            <div class="row g-0 justify-content-between position-relative">
                 
                 <div class="col-6 p-0 z-1">
                     <router-link :to="{ name: 'YtVideo'}">

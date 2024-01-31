@@ -24,7 +24,7 @@ export default {
 
             <MySwiper/>
 
-            <div class="row cta-slider justify-content-center position-relative">
+            <div class="row g-0 cta-slider justify-content-center position-relative">
                 <div class="col-10 text-center">
                     <h3 class="fw-bold fs-4 mb-3">Start today for getting <span class="fw-light">Online Certification</span></h3>
                     <h2 class="fw-semibold fs-1 mb-4">You can be your own guiding star with our help!</h2>

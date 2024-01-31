@@ -52,7 +52,7 @@ export default {
 <template>
     <section class="counter-section">
         <div class="container">
-            <div class="row">
+            <div class="row g-0">
                 <div v-for="(singleCard, i) in cardData" class="col-3 card-data-container text-center">
                     <h3 class="fw-bold fs-2 mb-4">{{ singleCard.title }}</h3>
                     <h2 class="fw-bold display-1 mb-3">{{ singleCard.counter }}</h2>

@@ -39,7 +39,7 @@ export default {
             <h4 class="text-center fs-6 mb-3">Maxcoack Available Courses</h4>
             <h2 class="text-center fw-bold mb-5">Access <span class="fw-light text-highlight">Smart Tutoring</span> Program For benefits.</h2>
 
-            <div class="row">
+            <div class="row g-0">
                 <div class="tutoring-card" v-for="(singleTutoring, i) in smartTutoring">
                     <div>
                         <img :src="singleTutoring.image" :alt="singleTutoring.title">

@@ -13,7 +13,7 @@ export default {
 <template>
     <section class="newsletter-section py-5 position-relative">
 
-        <div class="row justify-content-center">
+        <div class="row g-0 justify-content-center">
             <div class="col-5 p-4 text-center">
                 <h2 class="fw-bold mb-3">Subscribe <span class="fw-light">Newsletters</span></h2>
                 <p class="mb-4">

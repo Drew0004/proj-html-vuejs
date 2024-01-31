@@ -35,7 +35,7 @@ export default {
     <section class="hero-section">
         <div class="container">
 
-            <div class="row align-items-center pt-5">
+            <div class="row g-0 align-items-center pt-5">
                 <!---- Sezione testi  ---->
                 <div class="col-4 p-3">
                     <h1 class="fw-bold fs-1 mb-3">Distant learning for further expansion</h1>
@@ -74,7 +74,7 @@ export default {
                 </div>
                 
                 <div class="col-12 my-5">
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="logo-container d-flex justify-content-center align-items-center" v-for="(singleLogo, i) in clientLogos">
                             <img class="w-80 d-block" :src="singleLogo.path" alt="Client Logo">
                         </div>

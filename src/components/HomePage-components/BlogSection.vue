@@ -47,7 +47,7 @@ export default {
     <section class="blog-section py-5">
         <div class="container">
 
-            <div class="row justify-content-between align-items-center">
+            <div class="row g-0 justify-content-between align-items-center">
                 <div class="col-4">
                     <h4 class="fw-light fs-6">Enjoyable Insights</h4>
                     <h2 class="fw-bold mb-4">Most Viewed <span class="fw-light">Best Blogs</span></h2>
