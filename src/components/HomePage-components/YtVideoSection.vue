@@ -108,7 +108,7 @@ export default {
     a{
         text-decoration: none;
         color: $main-green-color;
-        border-bottom: 0.5px solid $main-gray-color;
+        border-bottom: 0.5px solid rgb(234, 234, 234);
     }
 
     .pattern-section{
