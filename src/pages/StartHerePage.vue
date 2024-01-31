@@ -204,16 +204,16 @@ export default {
             <h5>SUCCEED WITH <strong>MAXCOACH</strong></h5>
             <h2>Frequently asked questions</h2>
             <div class="Faq mt-5 mb-5">
-                <div class="">
+                <div class="allaccordation">
                     <div v-for="(accordation,index) in faq" class="accordion singleaccordation" :id="`accordion-parent-${index}`">
                     <div class="accordion-item">
-                        <div class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="`#accordion-${index}`" aria-expanded="true" :aria-controls="`accordion-${index}`">
-                                {{ accordation.question }}
+                        <div class="accordion-header ">
+                            <button id="mybuttonheader" class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="`#accordion-${index}`" aria-expanded="true" :aria-controls="`accordion-${index}`">
+                                <span class="question"><strong>{{ accordation.question }}</strong></span>
                             </button>
                         </div>
                         <div :id="`accordion-${index}`" class="accordion-collapse collapse" :data-bs-parent="`#accordion-parent-${index}`">
-                            <div class="accordion-body">
+                            <div class="accordion-body myaccordion-body ">
                                 <p>{{ accordation.answer }}</p>
                             </div>
                         </div>
@@ -408,16 +408,43 @@ i{
 }
 // FINE FOTO template
 // INIZIO FAQ
-.Faq{
+// .Faq{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     border: 1px solid red;
+// }
+
+.allaccordation{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
-    border: 1px solid red;
 }
 
 .singleaccordation{
-    border: 1px solid blue;
+    width: 50%;
+    padding: 20px;
+}
+
+.question{
+    color: grey;
+}
+
+#mybuttonheader{
+    background-color: white;
+    padding: 25px;
+}
+#mybuttonheader:hover{
+background-color: #20AD96;
+}
+
+#mybuttonheader:hover .question{
+    color: white;
+}
+
+.myaccordion-body{
+    box-shadow: 5px 10px 18px #8888884f;
+    text-align: left;
+    color: grey;
 }
 
 </style>
