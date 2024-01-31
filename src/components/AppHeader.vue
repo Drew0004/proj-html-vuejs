@@ -251,52 +251,63 @@ export default {
                     </div>
                     <div class="dropdown">
                         <div v-for="(elem,index) in navbar" :key='index' class="singlemenu">
-                            {{ elem.name }}
+                            <span class="elem">{{ elem.name }}</span>
                         </div>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" id="firstdropdown">
                             <div v-for="(elem,index) in firstdropdown" :key='index'>
-                                <RouterLink :to="{name: elem.link }">
+                                <ul>
+                                    <li>
+                                        <RouterLink :to="{name: elem.link }">
                                     {{ elem.linkname }}
-                                </RouterLink> 
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" id="seconddropdown">
                             <div v-for="(elem,index) in seconddropdown" :key='index'>
-                                <RouterLink :to="{name: elem.link }">
-                                    {{ elem.linkname }}
-                                </RouterLink> 
+                                <ul>
+                                    <li>
+                                        <RouterLink :to="{name: elem.link }">
+                                        {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" id="thirddropdown">
                             <div v-for="(elem,index) in thirddropdown" :key='index'>
-                                <RouterLink :to="{name: elem.link }">
-                                    {{ elem.linkname }}
-                                </RouterLink> 
+                                <ul>
+                                    <li>
+                                        <RouterLink :to="{name: elem.link }">
+                                         {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" id="fifthdropdown">
                             <div v-for="(elem,index) in fifthdropdown" :key='index'>
-                                <RouterLink :to="{name: elem.link }">
-                                    {{ elem.linkname }}
-                                </RouterLink> 
+                                <ul>
+                                    <li>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" id="sixdropdown">
                             <div v-for="(elem,index) in sixdropdown" :key='index'>
-                                <RouterLink :to="{name: elem.link }">
-                                    {{ elem.linkname }}
-                                </RouterLink> 
+                                <ul>
+                                    <li>
+                                        <RouterLink :to="{name: elem.link }">
+                                            {{ elem.linkname }}
+                                        </RouterLink> 
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="dropdown-content">
-                            <div v-for="(elem,index) in seconddropdown" :key='index'>
-                                <RouterLink :to="{name: elem.link }">
-                                    {{ elem.linkname }}
-                                </RouterLink> 
-                            </div>
-                        </div>
-
-
                     </div>
                         <!-- <nav>
                             <ul>
@@ -343,7 +354,6 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid coral;
 }
 
 .container_img_header{
@@ -393,4 +403,5 @@ input[type=text] {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 </style>
