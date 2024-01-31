@@ -1,4 +1,5 @@
 <script>
+import MySwiper from './MySwiper.vue';
 export default {
     data() {
         return {
@@ -6,6 +7,9 @@ export default {
     },
     methods: {
 
+    },
+    components:{
+        MySwiper
     }
 }
 </script>
@@ -17,6 +21,8 @@ export default {
                 <h4>Great Words About MaxCoach</h4>
                 <h2>Our <span>top learners'</span> verbatim</h2>
             </div>
+
+            <MySwiper/>
         </div>
     </section>
 </template>
