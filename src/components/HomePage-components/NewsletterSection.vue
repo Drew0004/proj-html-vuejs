@@ -23,8 +23,8 @@ export default {
                 </p>
                 <form>
                     <div class="input-group">
-                        <input type="email" class="my-input fw-light form-control" placeholder="Enter your email" aria-label="" aria-describedby="button-addon1">
-                        <button class="my-button text-white btn btn-outline-secondary" type="button" id="button-addon1">Subscribe</button>
+                        <input type="email" class="my-input fw-light form-control" placeholder="Enter your email" aria-label="" aria-describedby="button-addon1" required minlength="5">
+                        <button class="my-button text-white btn btn-outline-secondary" id="button-addon1">Subscribe</button>
                     </div>
                 </form>
             </div>
