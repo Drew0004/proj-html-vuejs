@@ -177,7 +177,7 @@ export default {
                         <img :src="elem.imgtimeline" alt="">
                     </div>
                 </div>
-                <div class="time_line"></div>
+                <div class="time-line"></div>
                 <div class="container-text">
                     <h4>{{elem.titletimeline}}</h4>
                     <p>{{elem.texttimeline}}</p>
@@ -204,19 +204,22 @@ export default {
             <h5>SUCCEED WITH <strong>MAXCOACH</strong></h5>
             <h2>Frequently asked questions</h2>
             <div class="Faq mt-5 mb-5">
-                <div v-for="(accordation,index) in faq" class="accordion" id="accordionExample">
+                <div class="">
+                    <div v-for="(accordation,index) in faq" class="accordion singleaccordation" :id="`accordion-parent-${index}`">
                     <div class="accordion-item">
                         <div class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="`#accordion-${index}`" aria-expanded="true" :aria-controls="`accordion-${index}`">
                                 {{ accordation.question }}
                             </button>
                         </div>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div :id="`accordion-${index}`" class="accordion-collapse collapse" :data-bs-parent="`#accordion-parent-${index}`">
                             <div class="accordion-body">
                                 <p>{{ accordation.answer }}</p>
                             </div>
                         </div>
                     </div>
+                </div>
+
                 </div>
             </div>
         </div>
@@ -300,15 +303,32 @@ i{
 .timelinecontainer{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    margin: 20px;
+    padding: 40px;
     position: relative;
     flex-direction: row-reverse;
+    .top-container-text h3 {
+        margin-bottom: 40px;
+        color:#20AD96 ;
+        text-align: left;
+        margin-right: 40px;
+    }
 }
 
-.timelinecontainer:nth-child(2n){
+.timelinecontainer:nth-of-type(2n){
     flex-direction: row;
     text-align: left;
+
+    .top-container-text h3 {
+        text-align: right;
+    }
+
+    .container-text h4{
+        text-align: left;
+    }
+    .container-text p{
+        text-align: left;
+    }
+
     
 }
 .container-text, .top-container-text{
@@ -320,19 +340,14 @@ i{
 
 .container-text{
     margin-top: 70px;
-    line-height: 30px
+    line-height: 30px;
+    text-align:right;
 }
 
-.top-container-text h3{
-    margin-bottom: 40px;
-    text-align: right;
-    color:#20AD96 ;
-    margin-right: 40px;
-}
 .time-line{
     position: absolute;
     left: 50%;
-    margin-left: -1px;
+    margin-left: 1px;
     height: 100%;
     border-left: 2px solid #e2e2e8;
 }
@@ -393,16 +408,16 @@ i{
 }
 // FINE FOTO template
 // INIZIO FAQ
-// .Faq{
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 30px;
-// }
+.Faq{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
 
-// .singleaccordation{
-//     background-color: #20AD96;
-//     padding: 20px;
-// }
+.singleaccordation{
+    border: 1px solid blue;
+}
 
 </style>
