@@ -130,6 +130,7 @@ export default {
         }
     
         .lower-card{
+            height: 200px;
             background-color: white;
     
             h2{
