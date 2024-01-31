@@ -204,19 +204,6 @@ export default {
             <h5>SUCCEED WITH <strong>MAXCOACH</strong></h5>
             <h2>Frequently asked questions</h2>
             <div class="Faq">
-                <div class="accordation">
-                    <div>
-                        <h2>
-                            <button>
-
-                            </button>
-                        </h2>
-                        <div>
-                            
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     </main>
@@ -396,5 +383,9 @@ i{
 //     padding: 30px;
 // }
 
+// .singleaccordation{
+//     background-color: #20AD96;
+//     padding: 20px;
+// }
 
 </style>
