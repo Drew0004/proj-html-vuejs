@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-    <main>
+
         <HeroSection/>
 
         <OnlineCourseSection/>
@@ -50,7 +50,7 @@ export default {
 
         <NewsletterSection/>
 
-    </main>
+
 </template>
 
 <style lang="scss" scoped>

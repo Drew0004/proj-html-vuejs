@@ -11,27 +11,37 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: HomePage,
+            components: {
+                default: HomePage
+            },
         },
         {
             path: '/QuickStart',
             name: 'StartHerePage',
-            component: StartHerePage,
+            components: {
+                default: StartHerePage
+            },
         },
         {
             path: '/Customer',
             name: 'CustomerPage',
-            component: CustomerPage,
+            components: {
+                default: CustomerPage
+            }
         },
         {
             path: '/OffcanvaVid',
             name: 'YtVideo',
-            component: YtVideoPage,
+            components: {
+                video: YtVideoPage
+            },
         },
         {
             path: '/:pathMatch(.*)*',
             name: 'not-found',
-            component: ErrorPage,
+            components: {
+                default: ErrorPage
+            }
         }
 
     ]

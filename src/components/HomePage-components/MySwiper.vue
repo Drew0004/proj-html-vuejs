@@ -46,11 +46,10 @@ export default {
                     role:'/Private Tutor'
                 },
      
-            ]
+            ],
         };
     },
     methods: {
-
     },
     components: {
       Swiper,
@@ -58,9 +57,11 @@ export default {
     },
     setup() {
       return {
-        modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination,],
       };
     },
+    mounted(){
+    }
 }
 </script>
 
@@ -75,6 +76,7 @@ export default {
             }"
             :modules="modules"
             class="mySwiper"
+            
         >
             <swiper-slide
             v-for="(singleCard, i) in swiperCards">
@@ -117,6 +119,10 @@ export default {
   align-items: center;
   transition: 300ms opacity;
 
+  &:not(.swiper-slide-next) {
+    opacity: 0.4;
+  }
+
   h2{
     color: $main-purple-color;
     line-height: 2rem;
@@ -146,7 +152,7 @@ export default {
   }
 
   .my-opacity{
-    opacity: 0.7;
+    opacity: 0.5;
   }
 }
 

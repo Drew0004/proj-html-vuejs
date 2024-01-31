@@ -21,17 +21,23 @@ export default {
     mounted(){
         // axios.get()
         // .then();
+        console.log('this.$route.path: ', this.$route.path)
     }
 }
 </script>
 
 <template>
-  
-    <AppHeader />
+    <div v-if="$route.path === '/OffcanvaVid'">
 
-    <AppMain />
-
-    <AppFooter />
+        <router-view name="video"></router-view>
+    </div>
+    <div v-else>
+        <AppHeader />
+    
+        <AppMain />
+    
+        <AppFooter />
+    </div>
 
 </template>
 
