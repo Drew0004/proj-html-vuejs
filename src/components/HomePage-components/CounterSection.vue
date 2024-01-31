@@ -6,27 +6,45 @@ export default {
                 {
                     title:'Successfully trained',
                     limit: '1790',
-                    category: 'Enrolled Learners'                    
+                    category: 'Enrolled Learners',
+                    counter:'0'                    
                 },
                 {
                     title:'Proudly Received',
                     limit: '19',
-                    category: 'Countrywide Awards'                    
+                    category: 'Countrywide Awards',
+                    counter:'0'                      
                 },
                 {
                     title:'Firmly Established',
                     limit: '24',
-                    category: 'Local Branches'                    
+                    category: 'Local Branches',
+                    counter:'0'                      
                 },
                 {
                     title:'Getting Featured on',
                     limit: '1090',
-                    category: 'Blog Posts'                    
+                    category: 'Blog Posts',
+                    counter:'0'                     
                 },
             ]
         };
     },
     methods: {
+        startCountAnimation() {
+            this.cardData.forEach((singleCard, i) => {
+                const interval = setInterval(() => {
+                    if (singleCard.counter < singleCard.limit) {
+                        singleCard.counter++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 1 * i);
+            });
+        }
+    },
+    created(){
+        this.startCountAnimation()
     }
 }
 </script>
@@ -37,7 +55,7 @@ export default {
             <div class="row">
                 <div v-for="(singleCard, i) in cardData" class="col-3 card-data-container text-center">
                     <h3 class="fw-bold fs-2 mb-4">{{ singleCard.title }}</h3>
-                    <h2 class="fw-bold display-1 mb-3">{{ singleCard.limit }}</h2>
+                    <h2 class="fw-bold display-1 mb-3">{{ singleCard.counter }}</h2>
                     <h4 class="fs-5 fw-bold">{{ singleCard.category }}</h4>
                 </div>
             </div>
