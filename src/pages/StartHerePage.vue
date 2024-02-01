@@ -179,7 +179,7 @@ export default {
                 <h2 class="p-3"><strong>Best chances for expanding your success to the max</strong></h2>
             </div>
             <div v-for="(elem,index) in timeline" class="timelinecontainer">
-                <div class="top-container-text">
+                <div class="top-container-text" >
                     <h3> {{elem.sectiontimeline}} </h3>
                     <div class="container-img">
                         <img :src="elem.imgtimeline" alt="">
