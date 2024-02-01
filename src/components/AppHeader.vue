@@ -413,8 +413,9 @@ input[type=text] {
 
 .iconsearch{
     background-color: #F5F5F5;
-    padding: 12px;
+    padding: 12.5px;
     color: #20ad96 ;
+    border: 1px solid #F5F5F5;
 }
 .singlemenu{
     display: inline-block;
