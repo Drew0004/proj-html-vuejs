@@ -422,7 +422,7 @@ ul{
     li a{
        color: grey;
        padding: 20px;
-       font-size: 13px;
+       font-size: 15px;
     //    border: 1px solid red;
     }
 }
