@@ -186,7 +186,7 @@ export default {
                     </div>
                 </div>
                 <div class="time-line"></div>
-                <div class="container-text">
+                <div class="container-text p-5 me-4">
                     <h4>{{elem.titletimeline}}</h4>
                     <p>{{elem.texttimeline}}</p>
                 </div>
@@ -386,6 +386,7 @@ i{
     margin-left: 1px;
     height: 100%;
     border-left: 2px solid #e2e2e8;
+    
 }
 
 .undertimeline h4{
