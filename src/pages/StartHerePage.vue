@@ -7,18 +7,21 @@ export default {
             {
                 image: '../../public/course-portal/images/corousel1.jpg',
                 title: 'AWAKEN YOUR GIFTS NOW',
-                secondtitle:'01 INSPIRING CURRICULUM',
-                text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe molestiae ut quisquam ex provident unde quam veritatis excepturi, quaerat tenetur!',
+                number:'01',
+                secondtitle:'INSPIRING CURRICULUM',
+                text: 'Learning with MaxCoach might a turning point in your life when you get communication with a great awakening of born talents.',
             }, {
                 image: '../../public/course-portal/images/corousel2.jpg',
                 title: 'OPEN UP A BRIGHT SKY',
-                secondtitle:'02 LIFE CONSULTING',
-                text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe molestiae ut quisquam ex provident unde quam veritatis excepturi, quaerat tenetur!',
+                number:'02',
+                secondtitle:'LIFE CONSULTING',
+                text: 'Ever fell drained of ideas and inspiration in life? Lost in no where and have no place to go? Find help and advice from our MaxCoach specialists.',
             },{
                 image: '../../public/course-portal/images/corousel3.jpg',
                 title: 'WRITE YOUR OWN LIFE BOOK',
-                secondtitle:'03 SKILL ADVANCEMENT',
-                text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe molestiae ut quisquam ex provident unde quam veritatis excepturi, quaerat tenetur!',
+                number:'03',
+                secondtitle:'SKILL ADVANCEMENT',
+                text: 'Not only your skills are advanced, your inner self can get a new identity as well. You are the one who take the full control of your life book.',
             },
         ],
         timeline:[
@@ -140,20 +143,25 @@ export default {
         <div class="mycontainer">
             <div class="slider-wrapper">
                 <div class="item" v-for="(slide,index) in slides" :class="{visibility:current!=index}"> 
-                    <img :src="slide.image" alt="" />
-                    <div class="text">
-                        <div>
-                            <h2>{{slide.title}}</h2>
-                        </div>
-                        <div>
-                            <h4>{{slide.secondtitle}}</h4>
-                            <p>
-                                {{slide.text}}
-                            </p>
+                    <div class="slider-imgcontainer">
+                        <img :src="slide.image" alt="" />
+                    </div>
+                    <div class="bg_opacity">
+                        <div class="text">
+                            <div class="me-5">
+                                <h2>{{slide.title}}</h2>
+                            </div>
+                            <div>
+                                <span class="number me-5">{{slide.number}}</span>
+                                <span class="secondtitle">{{slide.secondtitle}}</span>
+                                <p>
+                                    {{slide.text}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="thumbs">
+                <div class="arrow_container">
                     <div class="right arrow">
                         <i class="fa-solid fa-caret-right" @click="rightSlide"></i>    
                     </div>
@@ -166,9 +174,9 @@ export default {
         <!-- FINE CAROSELLO-->
         <!-- START TIMELINE -->
         <div class="container">
-            <div class="text-center">
-                <h4>FOUR MAJOR STEPS TO SUCCESS</h4>
-                <h2>Best chances for expanding your success to the max</h2>
+            <div class="text-center toptimeline">
+                <h4 class="p-3">FOUR MAJOR STEPS TO SUCCESS</h4>
+                <h2 class="p-3"><strong>Best chances for expanding your success to the max</strong></h2>
             </div>
             <div v-for="(elem,index) in timeline" class="timelinecontainer">
                 <div class="top-container-text">
@@ -183,9 +191,9 @@ export default {
                     <p>{{elem.texttimeline}}</p>
                 </div>
             </div>
-            <div class="text-center p-4 mb-4">
-                <h4>GET YOURSELF A MAXCOACH ID?</h4>
-                <h2>Take your interest and register an online class today to enjoy life fully</h2>
+            <div class="text-center p-4 mb-4 undertimeline">
+                <h4 class="mt-5">GET YOURSELF A <strong>MAXCOACH</strong> ID?</h4>
+                <h2 class="mt-5">Take your interest and register an online class today to enjoy life fully</h2>
                 <button class="button mb-4 mt-4"><strong>Get started for free</strong></button>
             </div>
         </div>
@@ -202,21 +210,21 @@ export default {
             </div>
         <!-- FINE CARD -->
         <!-- INIZIO ACCORDATION -->
-        <div class="container text-center mt-5 mb-5">
-            <h5>SUCCEED WITH <strong>MAXCOACH</strong></h5>
-            <h2>Frequently asked questions</h2>
+        <div class="container text-center mt-5 mb-5 topaccordion">
+            <h5 class="mb-4">SUCCEED WITH <strong>MAXCOACH</strong></h5>
+            <h2 class="mb-4">Frequently asked questions</h2>
             <div class="Faq mt-5 mb-5">
                 <div class="allaccordation">
-                    <div v-for="(accordation,index) in faq" class="accordion singleaccordation" :id="`accordion-parent-${index}`">
+                    <div v-for="(accordion,index) in faq" class="accordion singleaccordation" :id="`accordion-parent-${index}`">
                     <div class="accordion-item">
                         <div class="accordion-header ">
                             <button id="mybuttonheader" class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="`#accordion-${index}`" aria-expanded="true" :aria-controls="`accordion-${index}`">
-                                <span class="question"><strong>{{ accordation.question }}</strong></span>
+                                <span class="question"><strong>{{ accordion.question }}</strong></span>
                             </button>
                         </div>
                         <div :id="`accordion-${index}`" class="accordion-collapse collapse" :data-bs-parent="`#accordion-parent-${index}`">
                             <div class="accordion-body myaccordion-body ">
-                                <p>{{ accordation.answer }}</p>
+                                <p>{{ accordion.answer }}</p>
                             </div>
                         </div>
                     </div>
@@ -238,14 +246,18 @@ export default {
     // border: 2px solid blue;
     position: relative;
     margin-bottom: 40px;
+
+    .slider-imgcontainer{
+        height: 850px;
+    }
 }
-.item img {
+
+.slider-imgcontainer img {
     width: 100%;
     height: 100%;
     object-fit:cover;
     object-position: center;
-    image-rendering:optimizeQuality;
-    filter: blur(2px);
+    filter: blur(2.3px);
 }
 
 .text{
@@ -256,13 +268,26 @@ export default {
 
 .text h2{
     font-size: 4em;
-    line-height:70px;
+    line-height:60px;
+    text-align: right;
+    padding: 10px;
 }
 
-.text h4{
+.number{
+    font-size: 3em;
+}
+.secondtitle{
     font-size: 2em;
     line-height:70px;
+    padding: 10px;
 }
+
+.text p{
+    font-size: 2em;
+    line-height:35px;
+    padding: 10px;
+}
+
 
 .item .text {
     bottom: 0;
@@ -272,20 +297,30 @@ export default {
     padding: 10px;
     position: absolute;
     padding: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.599);
-    color: white;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+    color: rgb(244, 244, 244);
 }
 
 i{
     color: white;
     font-size: 2em;
-    text-shadow: 2px 2px 8px #454444;
+    text-shadow: 2px 2px 8px #3b3b3b;
 }
 
 .arrow {
     position: absolute;
     cursor: pointer;
     text-align: center;
+    background-color: #e2e2e892;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .right{
     opacity: 1;
@@ -353,6 +388,16 @@ i{
     border-left: 2px solid #e2e2e8;
 }
 
+.undertimeline h4{
+    color: #3F3A64;
+}
+
+.undertimeline h2{
+    font-size: 2.3em;
+    padding: 20px;
+}
+
+
 .button {
   background-color: #20AD96;
   border: none;
@@ -419,7 +464,9 @@ i{
 //     justify-content: space-between;
 //     border: 1px solid red;
 // }
-
+.topaccordion{
+    color: #3F3A64;
+}
 .allaccordation{
     display: flex;
     flex-wrap: wrap;
