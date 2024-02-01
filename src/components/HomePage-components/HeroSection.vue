@@ -51,7 +51,7 @@ export default {
 
                     <div>
                         <span class="fw-light">
-                            Have questions? <a class="fw-bold" href="#nogo">Get free Sample <i class="fa-solid fa-arrow-right-long"></i> </a>
+                            Have questions? <a class="fw-bold from-left" href="#nogo">Get free Sample <i class="fa-solid fa-arrow-right-long"></i> </a>
                         </span>
                     </div>
                 </div>
@@ -122,9 +122,24 @@ export default {
             color: $main-indigo-color;
 
             a{
+                width: 50px;
                 text-decoration: none;
                 color: $main-green-color;
-                border-bottom: 0.5px solid rgb(234, 234, 234);
+                // border-bottom: 0.5px solid rgb(234, 234, 234);
+                
+                &.from-left::after {
+                    display:block;
+                    content: '';
+                    border-bottom: 0.5px solid $main-green-color; 
+                    transform: scaleX(0);  
+                    transition: transform 0.5s ease-in-out;
+                    // &:hover:after { transform: scaleX(1); }
+                    // &.fromRight:after{ transform-origin:100% 50%; }
+                }
+                &.from-left:after{transform-origin: 100% 50%; }
+
+                &.from-left:hover:after{ transform: scaleX(1); transform-origin:   0% 50%; border-bottom: 0.5px solid rgb(234, 234, 234) }
+                
             }
         }
 
