@@ -199,7 +199,7 @@ export default {
                                     link: '',
                                 },
                                 {
-                                linkname: 'Single Layout',
+                                linkname: 'Single Layout >',
                                 link: '',
                                 dropdownhover:[
                                     {
@@ -490,7 +490,7 @@ ul{
 
 .dropdownhover_content{
     position: absolute;
-    left: 180px;
+    left: 210px;
     right: 10%;
     background-color: #f9f9f9;
     min-width: 250px;
