@@ -15,6 +15,7 @@ export default {
                                 {
                                     linkname: 'MaxCoach Education',
                                     link: 'home',
+                                    badgehot:'hot',
                                 },
                                 {
                                     linkname: 'Course Portal',
@@ -23,6 +24,7 @@ export default {
                                 {
                                     linkname: 'Distant Learning',
                                     link: 'home',
+                                    badgehot:'hot',
                                 },
                                 {
                                     linkname: 'Multimedia Pedagogy',
@@ -48,10 +50,6 @@ export default {
                                     linkname: 'Gym Coaching',
                                     link: 'home',
                                 },
-                            ]
-                        },
-                        {
-                            items: [
                                 {
                                     linkname: 'Business',
                                     link: 'home',
@@ -60,6 +58,10 @@ export default {
                                     linkname: 'Artist',
                                     link: 'home',
                                 },
+                            ]
+                        },
+                        {
+                            items: [
                                 {
                                     linkname: 'Kitchen Coach',
                                     link: 'home',
@@ -87,10 +89,13 @@ export default {
                                 {
                                     linkname: 'Sales Coaching',
                                     link: 'home',
+                                    badgenew:'new',
                                 },
                                 {
                                     linkname: 'Mental Therapy',
                                     link: 'home',
+                                    badgenew:'new',
+
                                 },
                             ],
                         },
@@ -326,6 +331,16 @@ export default {
                                             <RouterLink :to="{name: item.link }">
                                             {{ item.linkname }}
                                             </RouterLink> 
+                                            <span v-if="item.badgehot" class="badgehot">
+                                                <strong>
+                                                    {{ item.badgehot }}
+                                                </strong>
+                                            </span>
+                                            <span v-if="item.badgenew" class="badgenew">
+                                                <strong>
+                                                    {{ item.badgenew }}
+                                                </strong>
+                                            </span>
                                             <img v-if="item.img" :src="item.img" alt="">
                                             <div v-if="item.dropdownhover" class="dropdownhover_content">
                                                 <ul>
@@ -395,6 +410,8 @@ ul{
     li a{
        color: grey;
        padding: 20px;
+       font-size: 15px;
+    //    border: 1px solid red;
     }
 
 }
@@ -448,7 +465,7 @@ input[type=text] {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 200px;
+  min-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 100;
@@ -488,11 +505,25 @@ input[type=text] {
     &:hover{
         .dropdownhover_content{
             display: block;
-
         }
-
     }
 }
+
+.badgehot{
+   background-color: transparent;
+   background-image: linear-gradient(45deg, #FE378C 0%, #FE5B34 100%);
+   color: white;
+   padding: 2px 4px;
+   font-size: 13px;
+} 
+
+.badgenew{
+   background-color: #20ad96;
+   color: white;
+   padding: 2px 4px;
+   font-size: 13px;
+
+} 
 
 
 </style>
