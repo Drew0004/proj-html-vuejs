@@ -327,7 +327,7 @@ export default {
         <section>
            <div class="container2">
             <div class="Instructor">
-                <img src="C:\Users\lucad\OneDrive\Documents\Esercizi\proj-html-vuejs\images\about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" class="foto">
+                <img src="../../public/course-portal/images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" class="foto">
                 <div class="informations">
                     <h4>
                         Maggie Strickland
@@ -426,7 +426,7 @@ export default {
 
                     <div class="recensione">
                       <div class="flex">
-                        <img src="C:\Users\lucad\OneDrive\Documents\Esercizi\proj-html-vuejs\images\about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" class="recensione-foto">
+                        <img src="../../public/course-portal/images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" class="recensione-foto">
                     <div>
                         <div style="padding-left: 50px;" class="flex">
                             <strong>EDNAWATSON</strong>
