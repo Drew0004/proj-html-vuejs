@@ -79,9 +79,21 @@ export default {
                 color: $main-indigo-color;
                 transition: 0.2s ease-in;
 
+                &:after {
+                display:block;
+                content: '';
+                border-bottom: solid 0.5px $main-green-color;  
+                transform: scaleX(0);  
+                transition: transform 0.5s ease-in-out;
+                }
+
                 &:hover{
                     color: $main-green-color;
-                    border-bottom: 0.5px solid rgb(234, 234, 234);
+                }
+
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: 0% 50%;
                 }
             }
 
