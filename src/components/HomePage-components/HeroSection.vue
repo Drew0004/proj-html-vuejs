@@ -93,6 +93,7 @@ export default {
 @use '../../assets/scss/partials/variables.scss' as*;
     .hero-section{
         background-color: white;
+        padding-top: 100px;
 
         h1{
             color: $main-purple-color;
