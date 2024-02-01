@@ -15,7 +15,7 @@ export default {
                                 {
                                     linkname: 'MaxCoach Education',
                                     link: 'home',
-                                    badgehot:'hot',
+                                    badgehot:'HOT',
                                 },
                                 {
                                     linkname: 'Course Portal',
@@ -24,7 +24,7 @@ export default {
                                 {
                                     linkname: 'Distant Learning',
                                     link: 'home',
-                                    badgehot:'hot',
+                                    badgehot:'HOT',
                                 },
                                 {
                                     linkname: 'Multimedia Pedagogy',
@@ -89,12 +89,12 @@ export default {
                                 {
                                     linkname: 'Sales Coaching',
                                     link: 'home',
-                                    badgenew:'new',
+                                    badgenew:'NEW',
                                 },
                                 {
                                     linkname: 'Mental Therapy',
                                     link: 'home',
-                                    badgenew:'new',
+                                    badgenew:'NEW',
 
                                 },
                             ],
@@ -322,31 +322,37 @@ export default {
                     </div>
                     <div class="dropdown">
                         <div v-for="(elem,index) in navbar" :key='index' class="singlemenu">
-                            <a href="http://">{{ elem.name }}</a>
-                            <span class="p-2"><i class="fa-solid fa-angle-down"></i></span>
+                            <a href="http://">
+                                {{ elem.name }}
+                            </a>
+                            <span class="p-2 iconangle">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
                             <div class="dropdown-content" :class="{'w-1000': elem.dropdown.length>1}">
                                 <div class="dropdown-column" v-for="(column,col_index) in elem.dropdown" :key="col_index">
                                     <ul>
                                         <li v-for="(item,item_index) in column.items" :key='item_index' class="listitem" >
                                             <RouterLink :to="{name: item.link }">
-                                            {{ item.linkname }}
+                                                {{ item.linkname }}
                                             </RouterLink> 
-                                            <span v-if="item.badgehot" class="badgehot">
+                                            <span v-if="item.badgehot" class="badge badgehot">
                                                 <strong>
                                                     {{ item.badgehot }}
                                                 </strong>
                                             </span>
-                                            <span v-if="item.badgenew" class="badgenew">
+                                            <span v-if="item.badgenew" class="badge badgenew">
                                                 <strong>
                                                     {{ item.badgenew }}
                                                 </strong>
                                             </span>
-                                            <img v-if="item.img" :src="item.img" alt="">
+                                            <div>
+                                                <img v-if="item.img" :src="item.img" alt="">
+                                            </div>
                                             <div v-if="item.dropdownhover" class="dropdownhover_content">
                                                 <ul>
                                                     <li v-for="(drop,index) in item.dropdownhover">
                                                         <RouterLink :to="{name: drop.link }">
-                                                        {{ drop.linkname }}
+                                                            {{ drop.linkname }}
                                                         </RouterLink> 
                                                     </li>
                                                 </ul>
@@ -357,12 +363,14 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="iconaccount">
                         <i class="fa-regular fa-circle-user"></i> 
                     </div>
                     <div>
-                        <span class="iconsearch"><i class="fa-solid fa-magnifying-glass"></i></span>
                         <input v-model="search" @keyup.enter="search" type="text" placeholder="Search..." >
+                        <span class="iconsearch">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -371,6 +379,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+// HEADER REGOLE BASI
+
 .bg_header{
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -397,6 +408,7 @@ export default {
 a{
     text-decoration: none;
     color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 ul{
@@ -410,30 +422,18 @@ ul{
     li a{
        color: grey;
        padding: 20px;
-       font-size: 15px;
+       font-size: 13px;
     //    border: 1px solid red;
     }
-
 }
 
-i{
-    font-size: 1.2em;
+.iconangle{
+        font-size: 10px;
 }
 
-input[type=text] {
-  border-radius: 4px;
-  background-color: #F5F5F5;
-  border: none;
-  padding: 12px;
-  color: black;
-}
+// FINE REGOLE BASE
+// REGOLE PER MENU A DISCESA
 
-.iconsearch{
-    background-color: #F5F5F5;
-    padding: 12.5px;
-    color: #20ad96 ;
-    border: 1px solid #F5F5F5;
-}
 .singlemenu{
     display: inline-block;
     padding: 20px;
@@ -490,7 +490,8 @@ input[type=text] {
 
 .dropdownhover_content{
     position: absolute;
-    left: 160px;
+    left: 180px;
+    right: 10%;
     background-color: #f9f9f9;
     min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -508,22 +509,55 @@ input[type=text] {
         }
     }
 }
+.badge{
+   color: white;
+   padding: 3px 4px;
+   font-size: 12px;
+}
 
 .badgehot{
    background-color: transparent;
    background-image: linear-gradient(45deg, #FE378C 0%, #FE5B34 100%);
-   color: white;
-   padding: 2px 4px;
-   font-size: 13px;
 } 
 
 .badgenew{
    background-color: #20ad96;
-   color: white;
-   padding: 2px 4px;
-   font-size: 13px;
-
 } 
+
+// FINE REGOLE MENU A DISCESA
+// INIZIO INPUT SEARCH
+
+input[type=text] {
+  border-radius: 4px;
+  background-color: #F5F5F5;
+  border: none;
+  padding: 12px;
+  color: black;
+  position: relative;
+}
+
+input[type=text]:hover {
+    border: 1px solid #20ad96;
+}
+
+
+.iconsearch{
+    background-color: #F5F5F5;
+    padding: 12px;
+    color: #20ad96 ;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #F5F5F5;
+}
+
+.iconaccount{
+    font-size: 1.2em;
+}
+
+.iconaccount:hover{
+    color: #20ad96 ;   
+}
+
 
 
 </style>
