@@ -17,8 +17,15 @@ export default {
             Customer-centric Info-Tech Strategies
         </h1>
 
-        <section class="mini-container">
-            Overview
+        <div style="margin-top: 80px; margin-left: 70px;">
+            <a href="http://localhost:5173/QuickStart" class="barra1">Home</a> / <a href="http://localhost:5173/QuickStart" class="barra1">Courses</a> / <a href="http://localhost:5173/QuickStart" class="barra1">Information Technology</a> / <a href="http://localhost:5173/QuickStart" class="barra1">Customer-centric Info-Tech Settings</a>
+        </div>
+
+        <section class="mini-container" style="margin-top: 100px;">
+            <a href="oerp" class="barra">Overview</a>
+            <a href="oerp" class="barra">Curriculum</a>
+            <a href="oerp" class="barra">Instructor</a>
+            <a href="oerp" class="barra">Reviews</a>
         </section>
 
         <section class="container">
@@ -102,13 +109,13 @@ export default {
             </div>
 
             <div>
-                Share this course <i class="fa-solid fa-share-nodes" style="margin-top: 20px; text-align: center; width:"></i>
+                <a href="http://localhost:5173/QuickStart" class="barra1">Share this course <i class="fa-solid fa-share-nodes" style="margin-top: 20px; text-align: center; width:"></i></a>
             </div>
           </div>
 
         </aside>
 
-        <section class="container1">
+        <section class="container4">
             <div class="box">
             <p>
                 <h5>
@@ -122,7 +129,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 250px;">
                     30 minutes
                 </button>
                 <button class="green">
@@ -137,7 +144,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 250px;">
                     15 minutes
                 </button>
                 <button class="green">
@@ -148,7 +155,7 @@ export default {
 
             <div class="white">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 223px;">
                     50 minutes
                 </button>
                 <button class="green">
@@ -159,7 +166,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 250px;">
                     2 hours
                 </button>
                 <button class="green">
@@ -170,7 +177,7 @@ export default {
 
             <div class="white">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 223px;">
                     1 hour
                 </button>
                 <button class="green">
@@ -180,7 +187,7 @@ export default {
 
             <div class="grey">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 223px;">
                     10 minutes
                 </button>
                 <button class="green">
@@ -191,7 +198,7 @@ export default {
 
             <div class="white">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 332px;">
                     30 minutes
                 </button>
                 <a href="http://localhost:5173/Lessons"><i class="fa-solid fa-lock"></i></a>
@@ -199,7 +206,7 @@ export default {
 
             <div class="grey">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 223px;">
                     10 minutes
                 </button>
                 <button class="green">
@@ -210,7 +217,7 @@ export default {
 
             <div class="white">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 223px;">
                     10 minutes
                 </button>
                 <button class="green">
@@ -220,7 +227,7 @@ export default {
             </div>
         </section>
 
-        <section class="container2">
+        <section class="container3">
             <div class="box">
             <p>
                 <h5>
@@ -234,7 +241,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 290px;">
                     30 minutes
                 </button>
                 <a href="http://localhost:5173/Lessons"><i class="fa-solid fa-lock"></i></a>
@@ -246,7 +253,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 290px;">
                     45 minutes
                 </button>
                 <a href="http://localhost:5173/Lessons"><i class="fa-solid fa-lock"></i></a>
@@ -254,7 +261,7 @@ export default {
 
             <div class="white">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 263px;">
                     50 minutes
                 </button>
                 <a href="http://localhost:5173/Lessons"><i class="fa-solid fa-lock"></i></a>
@@ -262,7 +269,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 180px;">
                     1 hours
                 </button>
                 <button class="green">
@@ -272,7 +279,7 @@ export default {
             </div>
         </section>
 
-        <section class="container2">
+        <section class="container3">
             <div class="box">
             <p>
                 <h5>
@@ -286,7 +293,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 290px;">
                     30 minutes
                 </button>
                 <a href="http://localhost:5173/Lessons"><i class="fa-solid fa-lock"></i></a>
@@ -298,7 +305,7 @@ export default {
 
             <div class="grey">
                 Lesson 01: Simple, attainables goal
-                <button class="red">
+                <button class="red" style="margin-left: 290px;">
                     45 minutes
                 </button>
                 <a href="http://localhost:5173/Lessons"><i class="fa-solid fa-lock"></i></a>
@@ -306,7 +313,7 @@ export default {
 
             <div class="white">
                 Live meeting about Infotech Strategies
-                <button class="red">
+                <button class="red" style="margin-left: 263px;">
                     50 minutes
                 </button>
                 <a href="http://localhost:5173/Lessons"><i class="fa-solid fa-lock"></i></a>
@@ -325,7 +332,7 @@ export default {
         </section>
 
         <section>
-           <div class="container2">
+           <div class="container3">
             <div class="Instructor">
                 <img src="../../public/course-portal/images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" class="foto">
                 <div class="informations">
@@ -430,6 +437,13 @@ export default {
                     <div>
                         <div style="padding-left: 50px;" class="flex">
                             <strong>EDNAWATSON</strong>
+                            <div style="margin-left: 260px;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star" style="margin-left: 5px;"></i>
+                            <i class="fa-solid fa-star" style="margin-left: 5px;"></i>
+                            <i class="fa-solid fa-star" style="margin-left: 5px;"></i>
+                            <i class="fa-solid fa-star" style="margin-left: 5px;"></i>
+                            </div>
                         </div>
 
                         <div style="padding-left: 50px; padding-top: 10px;">
@@ -444,6 +458,20 @@ export default {
                 </div>
             </div>
         </section>
+
+        <v-container>
+        
+        <div class="carosel">
+            <v-carousel :show-arrows="false">
+    <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      cover
+    ></v-carousel-item>
+  </v-carousel>
+        </div>
+        </v-container>
     </main>
 </template>
 
@@ -456,6 +484,21 @@ export default {
     text-align: center;
     color: white;
     border-radius: 10px;
+}
+
+.barra {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.barra1 {
+    text-decoration: none;
+    color: black;
+}
+
+.barra1:hover {
+    color: green;
 }
 
 .recensione {
@@ -521,14 +564,14 @@ h1 {
 }
 
 .mini-container {
-    background-color: aqua;
+    background-color: white;
     width: 800px;
     padding: 20px;
     margin-left: 70px;
     
 }
 .container {
-    background-color: aqua;
+    background-color: white;
     width: 800px;
     height: 1700px;
     margin: 70px;
@@ -537,7 +580,7 @@ h1 {
 }
 
 .container1 {
-    background-color: aqua;
+    background-color: white;
     width: 800px;
     height: 1700px;
     margin: 70px;
@@ -546,13 +589,30 @@ h1 {
 }
 
 .container2 {
-    background-color: aqua;
+    background-color: white;
     width: 800px;
     height: 700px;
     margin: 70px;
     flex-wrap: wrap;
     border-radius: 5px;
     padding: 50px;
+}
+
+.container3 {
+    background-color: white;
+    width: 850px;
+    height: 470px;
+    padding: 50px;
+    margin: 70px;
+}
+
+.container4 {
+    background-color: white;
+    width: 800px;
+    height: 530px;
+    margin: 70px;
+    flex-wrap: wrap;
+    border: 1px solid black;
 }
 
 .Instructor {
@@ -600,10 +660,10 @@ h1 {
 
 aside {
     width: 300px;
-    background-color: aqua;
+    background-color: white;
     height: 66vh;
     position: fixed;
-    top: 180px;
+    bottom: 180px;
     right: 100px;
     padding: 30px;
 }

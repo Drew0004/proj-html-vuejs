@@ -179,14 +179,14 @@ export default {
                 <h2 class="p-3"><strong>Best chances for expanding your success to the max</strong></h2>
             </div>
             <div v-for="(elem,index) in timeline" class="timelinecontainer">
-                <div class="top-container-text">
+                <div class="top-container-text" >
                     <h3> {{elem.sectiontimeline}} </h3>
                     <div class="container-img">
                         <img :src="elem.imgtimeline" alt="">
                     </div>
                 </div>
                 <div class="time-line"></div>
-                <div class="container-text">
+                <div class="container-text p-5 me-4">
                     <h4>{{elem.titletimeline}}</h4>
                     <p>{{elem.texttimeline}}</p>
                 </div>
@@ -386,6 +386,7 @@ i{
     margin-left: 1px;
     height: 100%;
     border-left: 2px solid #e2e2e8;
+    
 }
 
 .undertimeline h4{
